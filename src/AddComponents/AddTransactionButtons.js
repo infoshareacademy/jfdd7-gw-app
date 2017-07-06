@@ -1,5 +1,5 @@
 import React from 'react'
-import {ButtonToolbar} from 'react-bootstrap'
+import {ButtonToolbar, Button} from 'react-bootstrap'
 
 export default class AddTransactionButtons extends React.Component {
 

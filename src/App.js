@@ -4,16 +4,18 @@ import Categories from './Categories'
 import './App.css'
 import FirstPage from "./FirstPage"
 import AddTransaction from './AddTransaction'
-import AddTransactionButtons from "./AddComponents/AddTransactionButtons";
+import AddTransactionButtons from "./AddComponents/AddTransactionButtons"
+import AddTransactionForm from './AddComponents/AddTransactionForm'
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>formularz</div>
         <MainMenu/>
         <Categories/>
         <FirstPage/>
+        <AddTransactionForm/>
         <AddTransactionButtons/>
       </div>
     );
