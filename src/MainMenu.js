@@ -3,7 +3,7 @@
  */
 import React from 'react'
 
-import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
+import { Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
 
 export default class MainMenu extends React.Component {
 
@@ -14,27 +14,19 @@ export default class MainMenu extends React.Component {
   render() {
     return (
       <div className="MainMenu">
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#">Aplikacja Budżetowa</a>
-            </Navbar.Brand>
-          </Navbar.Header>
-          <Nav>
-            <NavItem eventKey={1} href="#"
-            // onClick={this.linkClick}
-            >Kategorie</NavItem>
-            <NavItem eventKey={2} href="#">Historia</NavItem>
-            <NavItem eventKey={3} href="#">Coś</NavItem>
-            {/*<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">*/}
-              {/*<MenuItem eventKey={3.1}>Action</MenuItem>*/}
-              {/*<MenuItem eventKey={3.2}>Another action</MenuItem>*/}
-              {/*<MenuItem eventKey={3.3}>Something else here</MenuItem>*/}
-              {/*<MenuItem divider />*/}
-              {/*<MenuItem eventKey={3.4}>Separated link</MenuItem>*/}
-            {/*</NavDropdown>*/}
-          </Nav>
-        </Navbar>
+        <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
+          <NavItem eventKey="1" href="/home">Historia</NavItem>
+          <NavItem eventKey="2" title="Item">Kategorie</NavItem>
+          <NavItem eventKey="3" disabled>Analiza</NavItem>
+          <NavItem eventKey="4" disabled>Skarbonka</NavItem>
+          {/*<NavDropdown eventKey="4" title="Dropdown" id="nav-dropdown">*/}
+            {/*<MenuItem eventKey="4.1">Action</MenuItem>*/}
+            {/*<MenuItem eventKey="4.2">Another action</MenuItem>*/}
+            {/*<MenuItem eventKey="4.3">Something else here</MenuItem>*/}
+            {/*<MenuItem divider />*/}
+            {/*<MenuItem eventKey="4.4">Separated link</MenuItem>*/}
+          {/*</NavDropdown>*/}
+        </Nav>
       </div>
     )
   }
