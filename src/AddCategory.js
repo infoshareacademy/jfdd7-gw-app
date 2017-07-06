@@ -15,7 +15,7 @@ export default class AddCategory extends React.Component {
       <Col componentClass={ControlLabel} sm={2}>
         Kategoria
       </Col>
-      <Col sm={10}>
+      <Col sm={12}>
         <FormControl type="text" placeholder="Wpisz nową kategorię" />
       </Col>
     </FormGroup>
