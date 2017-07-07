@@ -33,6 +33,9 @@ export default class MainMenu extends React.Component {
           <LinkContainer to="/moneybox">
             <NavItem>Skarbonka</NavItem>
           </LinkContainer>
+          <LinkContainer to="/add-transaction">
+            <NavItem>Dodaj transakcję</NavItem>
+          </LinkContainer>
 
           {/*<NavDropdown eventKey="4" title="Dropdown" id="nav-dropdown">*/}
           {/*<MenuItem eventKey="4.1">Action</MenuItem>*/}

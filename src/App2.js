@@ -10,6 +10,10 @@ import {
 import MainMenu from './MainMenu'
 import AddCategory from './AddCategory'
 import FirstPage from './FirstPage'
+import Categories from './Categories'
+import AddTransaction from './AddTransaction'
+
+import './App.css'
 
 const BasicExample = () => (
   <Router>
@@ -20,6 +24,8 @@ const BasicExample = () => (
 
       <Route exact path="/" component={FirstPage}/>
       <Route path="/add-category" component={AddCategory}/>
+      <Route path="/categories" component={Categories}/>
+      <Route path="/add-transaction" component={AddTransaction}/>
     </div>
   </Router>
 )
