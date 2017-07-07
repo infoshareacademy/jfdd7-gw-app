@@ -4,8 +4,6 @@ import Categories from './Categories'
 import './App.css'
 import FirstPage from "./FirstPage"
 import AddTransaction from './AddTransaction'
-import AddTransactionButtons from "./AddComponents/AddTransactionButtons"
-import AddTransactionForm from './AddComponents/AddTransactionForm'
 import AddCategory from "./AddCategory";
 import Category from "./Category";
 
@@ -18,9 +16,7 @@ class App extends Component {
         <FirstPage/>
         <Category/>
         <AddCategory/>
-        <AddTransactionForm/>
-        <AddTransactionButtons/>
-
+        <AddTransaction/>
       </div>
     );
   }
