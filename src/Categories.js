@@ -14,7 +14,9 @@ export default class Categories extends React.Component {
         <h2>Kategoria</h2>
         <h2>Kategoria</h2>
         <h2>Kategoria</h2>
+        <h3>dodaj kategorie</h3>
       </div>
     )
   }
 }
+
