@@ -6,7 +6,8 @@ import FirstPage from "./FirstPage"
 import AddTransaction from './AddTransaction'
 import AddTransactionButtons from "./AddComponents/AddTransactionButtons"
 import AddTransactionForm from './AddComponents/AddTransactionForm'
-
+import AddCategory from "./AddCategory";
+import Category from "./Category";
 
 class App extends Component {
   render() {
@@ -15,8 +16,11 @@ class App extends Component {
         <MainMenu/>
         <Categories/>
         <FirstPage/>
+        <Category/>
+        <AddCategory/>
         <AddTransactionForm/>
         <AddTransactionButtons/>
+
       </div>
     );
   }
