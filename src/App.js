@@ -1,3 +1,6 @@
+/**
+ * Created by arturwojciechowski on 07.07.17.
+ */
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -8,30 +11,25 @@ import MainMenu from './MainMenu'
 import AddCategory from './AddCategory'
 import FirstPage from './FirstPage'
 import Categories from './Categories'
-import './App.css'
-import FirstPage from "./FirstPage"
 import AddTransaction from './AddTransaction'
-import AddTransactionButtons from "./AddComponents/AddTransactionButtons"
-import AddTransactionForm from './AddComponents/AddTransactionForm'
-import AddCategory from "./AddCategory";
-import Category from "./Category";
-
+import Transaction from './Transaction'
+import Transactions from './Transactions'
 import './App.css'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <MainMenu/>
+const App = () => (
+  <Router>
+    <div>
+      <MainMenu/>
 
-        <FirstPage/>
+      <hr/>
 
-
-        <Route exact path="/" component={FirstPage}/>
-        <Route path="/add-category" component={AddCategory}/>
-        <Route path="/categories" component={Categories}/>
-        <Route path="/add-transaction" component={AddTransaction}/>
-      </div>
-    );
-  }
-}
+      <Route exact path="/" component={FirstPage}/>
+      <Route path="/add-category" component={AddCategory}/>
+      <Route path="/categories" component={Categories}/>
+      <Route path="/add-transaction" component={AddTransaction}/>
+      <Route path="/transaction/:transactionId" component={Transaction}/>
+      <Route exact path="/transactions" component={Transactions}/>
+    </div>
+  </Router>
+)
+export default App
