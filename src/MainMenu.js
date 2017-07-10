@@ -21,8 +21,8 @@ export default class MainMenu extends React.Component {
           <LinkContainer to="/add-category">
             <NavItem>Dodaj kategorię</NavItem>
           </LinkContainer>
-          <LinkContainer to="/history">
-            <NavItem>Historia</NavItem>
+          <LinkContainer to="/transactions">
+            <NavItem>Historia transakcji</NavItem>
           </LinkContainer>
           <LinkContainer to="/categories">
             <NavItem>Kategorie</NavItem>

@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "date": "2016-07-27",
+    "value": 965.07,
+    "category": "rachunki"
+  },
+  {
+    "id": 2,
+    "date": "2017-07-04",
+    "value": 744.79,
+    "category": "transport"
+  },
+  {
+    "id": 3,
+    "date": "2017-01-12",
+    "value": 783.94,
+    "category": "transport"
+  },
+  {
+    "id": 4,
+    "date": "2016-11-07",
+    "value": 78.74,
+    "category": "rachunki"
+  },
+  {
+    "id": 5,
+    "date": "2016-12-31",
+    "value": -255.78,
+    "category": "transport"
+  },
+  {
+    "id": 6,
+    "date": "2016-09-02",
+    "value": -49.02,
+    "category": "transport"
+  },
+  {
+    "id": 7,
+    "date": "2016-10-26",
+    "value": 391.87,
+    "category": "alko"
+  },
+  {
+    "id": 8,
+    "date": "2016-10-19",
+    "value": 352.11,
+    "category": "rachunki"
+  },
+  {
+    "id": 9,
+    "date": "2017-03-10",
+    "value": -132.01,
+    "category": "alko"
+  },
+  {
+    "id": 10,
+    "date": "2016-11-18",
+    "value": 106.55,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 11,
+    "date": "2016-08-31",
+    "value": -75.95,
+    "category": "transport"
+  },
+  {
+    "id": 12,
+    "date": "2016-10-22",
+    "value": 455.01,
+    "category": "transport"
+  },
+  {
+    "id": 13,
+    "date": "2017-03-01",
+    "value": -824.56,
+    "category": "transport"
+  },
+  {
+    "id": 14,
+    "date": "2017-01-13",
+    "value": 792.04,
+    "category": "alko"
+  },
+  {
+    "id": 15,
+    "date": "2016-12-30",
+    "value": 345.46,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 16,
+    "date": "2016-07-27",
+    "value": -868.87,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 17,
+    "date": "2016-11-10",
+    "value": 131.84,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 18,
+    "date": "2016-12-07",
+    "value": 377.58,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 19,
+    "date": "2016-09-26",
+    "value": 795.3,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 20,
+    "date": "2017-04-20",
+    "value": 805.32,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 21,
+    "date": "2016-10-03",
+    "value": -421.76,
+    "category": "rachunki"
+  },
+  {
+    "id": 22,
+    "date": "2017-05-20",
+    "value": -894.27,
+    "category": "transport"
+  },
+  {
+    "id": 23,
+    "date": "2017-03-17",
+    "value": 46.34,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 24,
+    "date": "2017-05-02",
+    "value": -408.37,
+    "category": "transport"
+  },
+  {
+    "id": 25,
+    "date": "2017-06-22",
+    "value": -536.99,
+    "category": "alko"
+  },
+  {
+    "id": 26,
+    "date": "2017-07-02",
+    "value": 909.94,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 27,
+    "date": "2016-09-28",
+    "value": -699.82,
+    "category": "alko"
+  },
+  {
+    "id": 28,
+    "date": "2017-03-11",
+    "value": 722.24,
+    "category": "alko"
+  },
+  {
+    "id": 29,
+    "date": "2016-11-06",
+    "value": 737.41,
+    "category": "transport"
+  },
+  {
+    "id": 30,
+    "date": "2016-10-23",
+    "value": -236.04,
+    "category": "transport"
+  },
+  {
+    "id": 31,
+    "date": "2017-03-02",
+    "value": -587.16,
+    "category": "alko"
+  },
+  {
+    "id": 32,
+    "date": "2016-10-16",
+    "value": 731.85,
+    "category": "rachunki"
+  },
+  {
+    "id": 33,
+    "date": "2017-01-06",
+    "value": 289.2,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 34,
+    "date": "2016-08-18",
+    "value": -360.83,
+    "category": "transport"
+  },
+  {
+    "id": 35,
+    "date": "2016-10-21",
+    "value": 794.15,
+    "category": "transport"
+  },
+  {
+    "id": 36,
+    "date": "2016-08-29",
+    "value": -822.79,
+    "category": "transport"
+  },
+  {
+    "id": 37,
+    "date": "2017-02-05",
+    "value": -826.98,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 38,
+    "date": "2016-10-23",
+    "value": -503.04,
+    "category": "rachunki"
+  },
+  {
+    "id": 39,
+    "date": "2017-04-06",
+    "value": 690.48,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 40,
+    "date": "2017-01-21",
+    "value": 858.14,
+    "category": "rachunki"
+  },
+  {
+    "id": 41,
+    "date": "2017-01-15",
+    "value": 984.09,
+    "category": "alko"
+  },
+  {
+    "id": 42,
+    "date": "2017-06-05",
+    "value": 312.34,
+    "category": "alko"
+  },
+  {
+    "id": 43,
+    "date": "2016-11-03",
+    "value": -452.45,
+    "category": "rachunki"
+  },
+  {
+    "id": 44,
+    "date": "2016-09-17",
+    "value": 722.93,
+    "category": "alko"
+  },
+  {
+    "id": 45,
+    "date": "2017-06-01",
+    "value": -746.43,
+    "category": "transport"
+  },
+  {
+    "id": 46,
+    "date": "2017-04-22",
+    "value": 723.49,
+    "category": "alko"
+  },
+  {
+    "id": 47,
+    "date": "2017-01-06",
+    "value": 58.34,
+    "category": "alko"
+  },
+  {
+    "id": 48,
+    "date": "2017-07-01",
+    "value": 394.74,
+    "category": "rachunki"
+  },
+  {
+    "id": 49,
+    "date": "2017-02-21",
+    "value": -361.69,
+    "category": "transport"
+  },
+  {
+    "id": 50,
+    "date": "2017-06-13",
+    "value": -471.41,
+    "category": "alko"
+  },
+  {
+    "id": 51,
+    "date": "2017-01-11",
+    "value": -995.67,
+    "category": "rachunki"
+  },
+  {
+    "id": 52,
+    "date": "2017-02-25",
+    "value": 434.4,
+    "category": "alko"
+  },
+  {
+    "id": 53,
+    "date": "2017-03-13",
+    "value": -410.72,
+    "category": "rachunki"
+  },
+  {
+    "id": 54,
+    "date": "2017-05-29",
+    "value": 248.36,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 55,
+    "date": "2016-09-10",
+    "value": -278.21,
+    "category": "transport"
+  },
+  {
+    "id": 56,
+    "date": "2017-02-07",
+    "value": 785.33,
+    "category": "rachunki"
+  },
+  {
+    "id": 57,
+    "date": "2016-11-05",
+    "value": 618.96,
+    "category": "transport"
+  },
+  {
+    "id": 58,
+    "date": "2016-10-22",
+    "value": 73.97,
+    "category": "alko"
+  },
+  {
+    "id": 59,
+    "date": "2016-08-25",
+    "value": 893.1,
+    "category": "transport"
+  },
+  {
+    "id": 60,
+    "date": "2017-03-10",
+    "value": 734.44,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 61,
+    "date": "2016-08-14",
+    "value": 123.76,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 62,
+    "date": "2016-12-19",
+    "value": 823.1,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 63,
+    "date": "2017-02-06",
+    "value": 569.62,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 64,
+    "date": "2017-07-01",
+    "value": -359.02,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 65,
+    "date": "2016-12-01",
+    "value": -227.05,
+    "category": "rachunki"
+  },
+  {
+    "id": 66,
+    "date": "2016-12-16",
+    "value": -91.49,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 67,
+    "date": "2017-05-21",
+    "value": -172.59,
+    "category": "transport"
+  },
+  {
+    "id": 68,
+    "date": "2016-12-01",
+    "value": 177.41,
+    "category": "alko"
+  },
+  {
+    "id": 69,
+    "date": "2017-03-05",
+    "value": 784.54,
+    "category": "rachunki"
+  },
+  {
+    "id": 70,
+    "date": "2016-10-12",
+    "value": -718.53,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 71,
+    "date": "2017-04-07",
+    "value": -422.02,
+    "category": "transport"
+  },
+  {
+    "id": 72,
+    "date": "2016-09-07",
+    "value": 982.51,
+    "category": "alko"
+  },
+  {
+    "id": 73,
+    "date": "2017-01-17",
+    "value": 112.58,
+    "category": "transport"
+  },
+  {
+    "id": 74,
+    "date": "2017-01-01",
+    "value": 536.14,
+    "category": "transport"
+  },
+  {
+    "id": 75,
+    "date": "2017-05-09",
+    "value": 205.25,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 76,
+    "date": "2016-09-22",
+    "value": 775.33,
+    "category": "alko"
+  },
+  {
+    "id": 77,
+    "date": "2016-12-20",
+    "value": 523.82,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 78,
+    "date": "2017-04-02",
+    "value": -984.47,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 79,
+    "date": "2016-07-29",
+    "value": 956.7,
+    "category": "alko"
+  },
+  {
+    "id": 80,
+    "date": "2017-01-29",
+    "value": 420.42,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 81,
+    "date": "2016-11-26",
+    "value": 466.54,
+    "category": "rachunki"
+  },
+  {
+    "id": 82,
+    "date": "2016-12-13",
+    "value": -437.37,
+    "category": "rachunki"
+  },
+  {
+    "id": 83,
+    "date": "2016-07-22",
+    "value": -309.23,
+    "category": "transport"
+  },
+  {
+    "id": 84,
+    "date": "2017-06-13",
+    "value": -8.51,
+    "category": "rachunki"
+  },
+  {
+    "id": 85,
+    "date": "2016-10-17",
+    "value": 791.98,
+    "category": "alko"
+  },
+  {
+    "id": 86,
+    "date": "2016-10-03",
+    "value": 190.09,
+    "category": "alko"
+  },
+  {
+    "id": 87,
+    "date": "2017-04-05",
+    "value": 155.84,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 88,
+    "date": "2017-03-04",
+    "value": -665.75,
+    "category": "alko"
+  },
+  {
+    "id": 89,
+    "date": "2017-05-18",
+    "value": 641.65,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 90,
+    "date": "2017-05-22",
+    "value": 968.72,
+    "category": "alko"
+  },
+  {
+    "id": 91,
+    "date": "2017-04-01",
+    "value": 883.81,
+    "category": "rachunki"
+  },
+  {
+    "id": 92,
+    "date": "2016-11-25",
+    "value": -200.59,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 93,
+    "date": "2017-03-03",
+    "value": 458.91,
+    "category": "wyżywienie"
+  },
+  {
+    "id": 94,
+    "date": "2016-08-11",
+    "value": -911.47,
+    "category": "transport"
+  },
+  {
+    "id": 95,
+    "date": "2017-05-21",
+    "value": 94.04,
+    "category": "rachunki"
+  },
+  {
+    "id": 96,
+    "date": "2017-06-21",
+    "value": -964.4,
+    "category": "rachunki"
+  },
+  {
+    "id": 97,
+    "date": "2017-04-21",
+    "value": -972.83,
+    "category": "alko"
+  },
+  {
+    "id": 98,
+    "date": "2016-10-16",
+    "value": -110.61,
+    "category": "rachunki"
+  },
+  {
+    "id": 99,
+    "date": "2016-09-27",
+    "value": -388.63,
+    "category": "transport"
+  },
+  {
+    "id": 100,
+    "date": "2017-03-27",
+    "value": 569.47,
+    "category": "alko"
+  }
+]
