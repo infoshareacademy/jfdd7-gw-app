@@ -2,8 +2,8 @@
  * Created by mateusztarsinski on 05.07.17.
  */
 import React from 'react'
-
-import { Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
+import {Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
+import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap'
 
 export default class MainMenu extends React.Component {
 
@@ -15,16 +15,34 @@ export default class MainMenu extends React.Component {
     return (
       <div className="MainMenu">
         <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
-          <NavItem eventKey="1" href="/home">Historia</NavItem>
-          <NavItem eventKey="2" title="Item">Kategorie</NavItem>
-          <NavItem eventKey="3" disabled>Analiza</NavItem>
-          <NavItem eventKey="4" disabled>Skarbonka</NavItem>
+          <IndexLinkContainer to="/">
+            <NavItem>Home</NavItem>
+          </IndexLinkContainer>
+          <LinkContainer to="/add-category">
+            <NavItem>Dodaj kategorię</NavItem>
+          </LinkContainer>
+          <LinkContainer to="/history">
+            <NavItem>Historia</NavItem>
+          </LinkContainer>
+          <LinkContainer to="/categories">
+            <NavItem>Kategorie</NavItem>
+          </LinkContainer>
+          <LinkContainer to="/analysis">
+            <NavItem>Analiza</NavItem>
+          </LinkContainer>
+          <LinkContainer to="/moneybox">
+            <NavItem>Skarbonka</NavItem>
+          </LinkContainer>
+          <LinkContainer to="/add-transaction">
+            <NavItem>Dodaj transakcję</NavItem>
+          </LinkContainer>
+
           {/*<NavDropdown eventKey="4" title="Dropdown" id="nav-dropdown">*/}
-            {/*<MenuItem eventKey="4.1">Action</MenuItem>*/}
-            {/*<MenuItem eventKey="4.2">Another action</MenuItem>*/}
-            {/*<MenuItem eventKey="4.3">Something else here</MenuItem>*/}
-            {/*<MenuItem divider />*/}
-            {/*<MenuItem eventKey="4.4">Separated link</MenuItem>*/}
+          {/*<MenuItem eventKey="4.1">Action</MenuItem>*/}
+          {/*<MenuItem eventKey="4.2">Another action</MenuItem>*/}
+          {/*<MenuItem eventKey="4.3">Something else here</MenuItem>*/}
+          {/*<MenuItem divider />*/}
+          {/*<MenuItem eventKey="4.4">Separated link</MenuItem>*/}
           {/*</NavDropdown>*/}
         </Nav>
       </div>
