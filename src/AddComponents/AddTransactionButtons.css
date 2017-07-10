@@ -1,0 +1,15 @@
+.btn {
+    margin-top: 5px;
+    padding: 10px;
+}
+Button.left {
+    float: left;
+}
+Button.right {
+    float: right;
+}
+
+.col-md-5 {
+    text-align: center;
+
+}

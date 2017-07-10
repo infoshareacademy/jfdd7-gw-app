@@ -8,7 +8,13 @@ import MainMenu from './MainMenu'
 import AddCategory from './AddCategory'
 import FirstPage from './FirstPage'
 import Categories from './Categories'
+import './App.css'
+import FirstPage from "./FirstPage"
 import AddTransaction from './AddTransaction'
+import AddTransactionButtons from "./AddComponents/AddTransactionButtons"
+import AddTransactionForm from './AddComponents/AddTransactionForm'
+import AddCategory from "./AddCategory";
+import Category from "./Category";
 
 import './App.css'
 
