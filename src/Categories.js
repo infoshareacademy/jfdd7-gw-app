@@ -3,7 +3,7 @@
  */
 import React from 'react'
 
-import {} from 'react-bootstrap'
+// import {} from 'react-bootstrap'
 
 export default class Categories extends React.Component {
 
