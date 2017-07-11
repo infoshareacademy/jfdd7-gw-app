@@ -1,6 +1,6 @@
 import React from 'react'
-import AddTransactionButtons from './AddComponents/AddTransactionButtons'
-import AddTransactionForm from './AddComponents/AddTransactionForm'
+import AddTransactionButtons from './AddTransactionComponents/AddTransactionButtons'
+import AddTransactionForm from './AddTransactionComponents/AddTransactionForm'
 
 
 export default class AddTransaction extends React.Component {

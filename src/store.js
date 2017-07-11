@@ -1,7 +1,7 @@
 /**
  * Created by arturwojciechowski on 11.07.17.
  */
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import  { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 
 // import counter from './state/counter'
