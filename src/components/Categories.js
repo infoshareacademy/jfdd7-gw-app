@@ -31,9 +31,22 @@ export default connect(
           { error === null ? null : <p>{error.message}</p> }
           { fetching === false ? null : <p>Fetching data...</p>}
 
-          <h2>Kategoria</h2>
-          <h2>Kategoria</h2>
-          <h2>Kategoria</h2>
+
+
+
+            {
+              //this.props.students.data !== null && this.props.students.data.map(
+              data !== null && data.filter(
+                (item, index, allItems) => allItems.findIndex(x => x.category === item.category) === index
+              ).map(
+                transaction => <h2>{transaction.category}</h2>
+              )
+            }
+
+
+
+
+
 
           <h3>dodaj kategorie</h3>
         </div>
