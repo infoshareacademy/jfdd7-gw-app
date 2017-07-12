@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
 import {Table} from 'react-bootstrap'
 
 import {fetchTransactions} from '../state/transactions'
@@ -22,7 +21,7 @@ export default connect(
 
 
     render() {
-      const {data, fetching, error} = this.props.transactions
+      const {data} = this.props.transactions
       return (
         <div>
           <Table bordered striped hover responsive>
@@ -36,7 +35,6 @@ export default connect(
             </thead>
             <tbody>
             {
-              //this.props.students.data !== null && this.props.students.data.map(
               data !== null && data.map(
                 transaction => (
                   <tr key={transaction.id}>
@@ -63,21 +61,3 @@ export default connect(
     }
   }
 )
-
-// <h1>Transactions</h1>
-// <ul>
-//
-// { data !== null && data.map(
-//   transaction => (
-//     <li key={transaction.id}>
-//       {
-//         Object.keys(transaction).map(
-//           key => <span>{transaction[key]}</span>
-//         )
-//       }
-//       {/*{transaction.date}, {transaction.value}, {transaction.category}*/}
-//     </li>
-//   )
-// )
-// }
-// </ul>
