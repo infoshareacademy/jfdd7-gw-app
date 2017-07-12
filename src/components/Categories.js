@@ -36,10 +36,12 @@ export default connect(
 
             {
               //this.props.students.data !== null && this.props.students.data.map(
-              data !== null && data.filter(
-                (item, index, allItems) => allItems.findIndex(x => x.category === item.category) === index
+              data !== null && data.map(
+                transaction => transaction.category
+              ).filter(
+                (item, index, allItems) => allItems.indexOf(item) === index
               ).map(
-                transaction => <h2>{transaction.category}</h2>
+                category => <h2>{category}</h2>
               )
             }
 
