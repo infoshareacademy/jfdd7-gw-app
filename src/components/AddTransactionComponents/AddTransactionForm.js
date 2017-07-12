@@ -1,5 +1,5 @@
 import React from 'react'
-import {FormControl, FormGroup,ControlLabel, InputGroup, DropdownButton, MenuItem} from 'react-bootstrap'
+import {FormControl, FormGroup, ControlLabel } from 'react-bootstrap'
 
 
 export default class AddTransactionForm extends React.Component {

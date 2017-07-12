@@ -14,7 +14,7 @@ import Categories from './Categories'
 import AddTransaction from './AddTransaction'
 import Transaction from './Transaction'
 import Transactions from './Transactions'
-import './App.css'
+import '../App.css'
 
 const App = () => (
   <Router>
