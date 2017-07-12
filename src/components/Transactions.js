@@ -1,35 +1,53 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+import {Table} from 'react-bootstrap'
 
-// import { Link } from 'react-router-dom'
+import {fetchTransactions} from '../state/transactions'
 
-export default class Histories extends React.Component {
+export default connect(
+  state => ({
+    transactions: state.transactions
+  }),
 
-  state = {
-    transactions: []
-  }
+  dispatch => ({
+    fetchTransactions: () => dispatch(fetchTransactions())
+  })
+)(
+  class Transactions extends React.Component {
 
-  componentWillMount() {
-    fetch(
-      process.env.PUBLIC_URL + '/data/transactions.json'
-    ).then(
-      response => response.json()
-    ).then(
-      transactions => this.setState({
-        transactions
-      })
-    ).catch(
-      error => console.log(error.message)
-    )
-  }
+    componentWillMount() {
+      this.props.fetchTransactions()
+    }
 
-  render() {
-    return (
-      <div>
-        <h1>Transactions</h1>
-        <ul>
-          { this.state === null ? <p>Fetching data ....</p> : null}
-          {
-            this.state !== null && this.state.transactions.map(
+// class Histories extends React.Component {
+//
+//   state = {
+//     transactions: []
+//   }
+//
+//   componentWillMount() {
+//     fetch(
+//       process.env.PUBLIC_URL + '/data/transactions.json'
+//     ).then(
+//       response => response.json()
+//     ).then(
+//       transactions => this.setState({
+//         transactions
+//       })
+//     ).catch(
+//       error => console.log(error.message)
+//     )
+//   }
+
+    render() {
+      const {data, fetching, error} = this.props.transactions
+      return (
+        <div>
+          <h1>Transactions</h1>
+          <ul>
+
+            { data !== null && data.map(
               transaction => (
                 <li key={transaction.id}>
                   {
@@ -41,9 +59,10 @@ export default class Histories extends React.Component {
                 </li>
               )
             )
-          }
-        </ul>
-      </div>
-    )
+            }
+          </ul>
+        </div>
+      )
+    }
   }
-}
+)
