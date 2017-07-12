@@ -10,7 +10,7 @@ export default class Histories extends React.Component {
 
   componentWillMount() {
     fetch(
-      process.env.PUBLIC_URL + '/transactions.json'
+      process.env.PUBLIC_URL + '/data/transactions.json'
     ).then(
       response => response.json()
     ).then(
