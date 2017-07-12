@@ -1,6 +1,3 @@
-/**
- * Created by mateusztarsinski on 05.07.17.
- */
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchTransactions} from '../state/transactions'
