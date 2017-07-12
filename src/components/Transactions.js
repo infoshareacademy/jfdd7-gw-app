@@ -1,49 +1,63 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {Table} from 'react-bootstrap'
 
-// import { Link } from 'react-router-dom'
+import {fetchTransactions} from '../state/transactions'
 
-export default class Histories extends React.Component {
+export default connect(
+  state => ({
+    transactions: state.transactions
+  }),
 
-  state = {
-    transactions: []
-  }
+  dispatch => ({
+    fetchTransactions: () => dispatch(fetchTransactions())
+  })
+)(
+  class Transactions extends React.Component {
 
-  componentWillMount() {
-    fetch(
-      process.env.PUBLIC_URL + '/data/transactions.json'
-    ).then(
-      response => response.json()
-    ).then(
-      transactions => this.setState({
-        transactions
-      })
-    ).catch(
-      error => console.log(error.message)
-    )
-  }
+    componentWillMount() {
+      this.props.fetchTransactions()
+    }
 
-  render() {
-    return (
-      <div>
-        <h1>Transactions</h1>
-        <ul>
-          { this.state === null ? <p>Fetching data ....</p> : null}
-          {
-            this.state !== null && this.state.transactions.map(
-              transaction => (
-                <li key={transaction.id}>
-                  {
-                    Object.keys(transaction).map(
-                      key => <span>{transaction[key]}</span>
-                    )
-                  }
-                  {/*{transaction.date}, {transaction.value}, {transaction.category}*/}
-                </li>
+
+    render() {
+      const {data} = this.props.transactions
+      return (
+        <div>
+          <Table bordered striped hover responsive>
+            <thead>
+            <tr>
+              <th>numer</th>
+              <th>data</th>
+              <th>wartość</th>
+              <th>kategoria</th>
+            </tr>
+            </thead>
+            <tbody>
+            {
+              data !== null && data.map(
+                transaction => (
+                  <tr key={transaction.id}>
+                    <td>
+                      { transaction.id }
+                    </td>
+                    <td>
+                      { transaction.date }
+                    </td>
+                    <td>
+                      { transaction.value }
+                    </td>
+                    <td>
+                      { transaction.category }
+                    </td>
+                  </tr>
+                )
               )
-            )
-          }
-        </ul>
-      </div>
-    )
+            }
+            </tbody>
+          </Table>
+        </div>
+      )
+    }
   }
-}
+)
