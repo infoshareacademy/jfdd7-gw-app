@@ -35,10 +35,10 @@ export default class MainMenu extends React.Component {
               <LinkContainer to="/categories">
                 <NavItem>Kategorie</NavItem>
               </LinkContainer>
+              <LinkContainer to="/stats">
+                <NavItem>Analiza</NavItem>
+              </LinkContainer>
               <NavDropdown title="Więcej opcji" id="basic-nav-dropdown">
-                    <LinkContainer to="/analysis">
-                  <NavItem>Analiza</NavItem>
-                  </LinkContainer>
                   <LinkContainer to="/moneybox">
                     <NavItem>Skarbonka</NavItem>
                   </LinkContainer>
