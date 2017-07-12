@@ -11,16 +11,14 @@ export default class FirstPageButton extends React.Component {
     return (
 
       <div className='tile'>
-         <ButtonToolbar>
-            <Button bsStyle="primary" bsSize="large" class="frontClass">Large button</Button>
 
-          </ButtonToolbar>
+        <Button bsStyle="primary" bsSize="large" className="custom">Large button</Button>
+
       </div>
 
     )
 
   }
-
 
 
 }

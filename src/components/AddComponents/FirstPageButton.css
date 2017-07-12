@@ -1,10 +1,13 @@
 .btn {
     margin: auto;
     text-align: center;
-
 }
 
 .btn-toolbar{
     margin: 5px;
+}
 
+.custom {
+    width: 200px;
+    height: 200px;
 }
