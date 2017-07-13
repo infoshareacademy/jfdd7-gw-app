@@ -26,9 +26,12 @@ export default class MainMenu extends React.Component {
               <IndexLinkContainer to="/">
                 <NavItem>Home</NavItem>
               </IndexLinkContainer>
-              <LinkContainer to="/add-category">
-                <NavItem>Dodaj kategorię</NavItem>
+              <LinkContainer to="/add-transaction">
+                <NavItem>Dodaj transakcję</NavItem>
               </LinkContainer>
+              {/*<LinkContainer to="/add-category">*/}
+                {/*<NavItem>Dodaj kategorię</NavItem>*/}
+              {/*</LinkContainer>*/}
               <LinkContainer to="/transactions">
                 <NavItem>Historia transakcji</NavItem>
               </LinkContainer>
@@ -38,14 +41,8 @@ export default class MainMenu extends React.Component {
               <LinkContainer to="/stats">
                 <NavItem>Analiza</NavItem>
               </LinkContainer>
-              <NavDropdown title="Więcej opcji" id="basic-nav-dropdown">
-                  <LinkContainer to="/moneybox">
-                    <NavItem>Skarbonka</NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/add-transaction">
-                    <NavItem>Dodaj transakcję</NavItem>
-                  </LinkContainer>
-              </NavDropdown>
+
+
             </Nav>
           </Navbar.Collapse>
         </Navbar>
