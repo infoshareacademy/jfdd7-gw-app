@@ -4,9 +4,11 @@
 import  { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import transactions from './state/transactions'
+import valuesFilters from './state/valuesFilters'
 
 const reducer = combineReducers({
-  transactions
+  transactions,
+  valuesFilters
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
