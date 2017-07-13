@@ -14,6 +14,7 @@ import Categories from './Categories'
 import AddTransaction from './AddTransaction'
 import Transaction from './Transaction'
 import Transactions from './Transactions'
+import Stats from './Stats'
 import '../App.css'
 
 const App = () => (
@@ -29,6 +30,8 @@ const App = () => (
       <Route path="/add-transaction" component={AddTransaction}/>
       <Route path="/transaction/:transactionId" component={Transaction}/>
       <Route exact path="/transactions" component={Transactions}/>
+      <Route exact path="/stats" component={Stats}/>
+
     </div>
   </Router>
 )
