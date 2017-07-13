@@ -17,7 +17,7 @@ export default class MainMenu extends React.Component {
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">Brand</a>
+              <img src="./pictures/logo.png" alt="logo"/>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
