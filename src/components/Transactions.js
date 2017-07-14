@@ -1,16 +1,19 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Table} from 'react-bootstrap'
+import {Table, Button} from 'react-bootstrap'
 
 import {fetchTransactions} from '../state/transactions'
+import {activateIncomesFilter} from '../state/valuesFilters'
 
 export default connect(
   state => ({
-    transactions: state.transactions
+    transactions: state.transactions,
+    activeFilterNames: state.valuesFilters.activeFilterNames
   }),
 
   dispatch => ({
-    fetchTransactions: () => dispatch(fetchTransactions())
+    fetchTransactions: () => dispatch(fetchTransactions()),
+    incomesFilter: () => dispatch(activateIncomesFilter())
   })
 )(
   class Transactions extends React.Component {
@@ -22,12 +25,15 @@ export default connect(
 
     render() {
       const {data} = this.props.transactions
+
       return (
         <div>
+          <Button
+            onClick={this.props.incomesFilter}>
+          </Button>
           <Table bordered striped hover responsive>
             <thead>
             <tr>
-              <th>numer</th>
               <th>data</th>
               <th>wartość</th>
               <th>kategoria</th>
@@ -35,12 +41,11 @@ export default connect(
             </thead>
             <tbody>
             {
-              data !== null && data.map(
+              data !== null && data.filter(
+                transaction => this.props.activeFilterNames.includes('incomesOnly') ? transaction.value > 0 : true
+              ).sort((a, b) => (new Date(b.date)) - (new Date(a.date))).map(
                 transaction => (
                   <tr key={transaction.id}>
-                    <td>
-                      { transaction.id }
-                    </td>
                     <td>
                       { transaction.date }
                     </td>
