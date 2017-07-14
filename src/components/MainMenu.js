@@ -5,6 +5,8 @@ import React from 'react'
 import {Nav, NavItem, NavDropdown, Navbar} from 'react-bootstrap'
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 
+import image from '../pictures/logo.png'
+
 export default class MainMenu extends React.Component {
 
   // linkClick() {
@@ -17,7 +19,7 @@ export default class MainMenu extends React.Component {
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
-              <img src="./pictures/logo.png" alt="logo"/>
+              <img src={image} alt="logo"/>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
