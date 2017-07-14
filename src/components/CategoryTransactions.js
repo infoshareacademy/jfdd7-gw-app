@@ -4,7 +4,6 @@ import {Table} from 'react-bootstrap'
 
 const CategoryTransactions = (props) => (
         <div>
-          <p>Transactions</p>
           <Table bordered striped hover responsive>
             <thead>
             <tr>
@@ -35,6 +34,20 @@ const CategoryTransactions = (props) => (
                 )
               )
             }
+            <tr >
+              <td>
+
+              </td>
+              <td >
+                SUMA:
+              </td>
+              <td>
+
+              </td>
+              <td>
+
+              </td>
+            </tr>
             </tbody>
           </Table>
         </div>

@@ -41,7 +41,7 @@ export default connect(
               category => {
                 const dataToDisplay = data.filter(transaction => transaction.category === category)
                 return (
-                  <div>
+                  <div key={category}>
                     <h2>{category}</h2>
                     <CategoryTransactions
                       transactions={dataToDisplay}
