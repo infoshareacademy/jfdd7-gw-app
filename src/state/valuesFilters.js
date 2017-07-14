@@ -1,5 +1,5 @@
 const TOGGLE_FILTER = 'valuesFilters/TOGGLE_FILTER'
-
+const RESET = 'RESET'
 export const activateFilter = filterName => ({
   type: TOGGLE_FILTER,
   filterName
@@ -11,6 +11,8 @@ const initialState = {
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {
+    case RESET:
+      return initialState
     case TOGGLE_FILTER:
       return {
         ...state,

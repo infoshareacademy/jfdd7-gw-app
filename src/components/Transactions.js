@@ -13,7 +13,8 @@ export default connect(
 
   dispatch => ({
     fetchTransactions: () => dispatch(fetchTransactions()),
-    activateFilter: (name) => dispatch(activateFilter(name))
+    activateFilter: (name) => dispatch(activateFilter(name)),
+    resetFilters: () => dispatch({ type: 'RESET' })
   })
 )(
   class Transactions extends React.Component {
@@ -27,9 +28,8 @@ export default connect(
       const {data} = this.props.transactions
 
       const filters = {
-        incomes: transaction => data.value > 0,
-        outcomes: transaction => data.value < 0,
-
+       value_incomes: transaction => transaction.value > 0,
+        value_outcomes: transaction => transaction.value < 0
       }
 
       // const dataToDisplay = data === null ? [] : data.filter(
@@ -48,14 +48,14 @@ export default connect(
       const buttons = [
         {
           label: 'Incomes',
-          filterName: 'incomes'
+          filterName: 'value_incomes'
         },
         {
           label: 'Outcomes',
-          filterName: 'outcomes'
-        }
+          filterName: 'value_outcomes'
+        },
 
-        ]
+      ]
 
       return (
         <div>
@@ -72,6 +72,7 @@ export default connect(
               )
             )
           }
+          <Button onClick={this.props.resetFilters}>Reset</Button>
           <Table bordered striped hover responsive>
             <thead>
             <tr>
@@ -83,7 +84,11 @@ export default connect(
             <tbody>
             {
               data !== null && data.filter(
-                transaction => this.props.activeFilterNames.includes('incomes') ? transaction.value > 0 : true
+                transaction => this.props.activeFilterNames.map(
+                  filterName => filters[filterName] || (() => true)
+                ).every(
+                  f => f(transaction) === true
+                )
               ).sort((a, b) => (new Date(b.date)) - (new Date(a.date))).map(
                 transaction => (
                   <tr key={transaction.id}>
