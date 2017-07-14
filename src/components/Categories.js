@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchTransactions} from '../state/transactions'
+import CategoryTransactions from './CategoryTransactions'
 
 // import {} from 'react-bootstrap'
 
@@ -20,7 +21,8 @@ export default connect(
     }
 
     render() {
-      const { data, fetching, error } = this.props.transactions
+      const {data, fetching, error} = this.props.transactions
+
       return (
         <div className="Categories">
           <h1>KATEGORIE</h1>
@@ -29,25 +31,28 @@ export default connect(
           { fetching === false ? null : <p>Fetching data...</p>}
 
 
+          {
+            //this.props.students.data !== null && this.props.students.data.map(
+            data !== null && data.map(
+              transaction => transaction.category
+            ).filter(
+              (item, index, allItems) => allItems.indexOf(item) === index
+            ).map(
+              category => {
+                const dataToDisplay = data.filter(transaction => transaction.category === category)
+                return (
+                  <div key={category}>
+                    <h2>{category}</h2>
+                    <CategoryTransactions
+                      transactions={dataToDisplay}
+                    />
+                  </div>
+                )
+              }
+            )
+          }
 
 
-            {
-              //this.props.students.data !== null && this.props.students.data.map(
-              data !== null && data.map(
-                transaction => transaction.category
-              ).filter(
-                (item, index, allItems) => allItems.indexOf(item) === index
-              ).map(
-                category => <h2>{category}</h2>
-              )
-            }
-
-
-
-
-
-
-          <h3>dodaj kategorie</h3>
         </div>
       )
     }
