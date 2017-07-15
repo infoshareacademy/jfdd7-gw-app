@@ -12,7 +12,7 @@ export default class FirstPageButton extends React.Component {
 
       <div className='tile'>
 
-        <Button bsStyle="primary" bsSize="large" className="custom">Large button</Button>
+
 
       </div>
 
