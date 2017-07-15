@@ -2,16 +2,20 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchTransactions} from '../state/transactions'
 import CategoryTransactions from './CategoryTransactions'
+import {Button} from 'react-bootstrap'
+import {activateFilter} from '../state/valuesFilters'
 
 // import {} from 'react-bootstrap'
 
 
 export default connect(
   state => ({
-    transactions: state.transactions
+    transactions: state.transactions,
+      activeFilterNames: state.valuesFilters.activeFilterNames
   }),
   dispatch => ({
-    fetchTransactions: () => dispatch(fetchTransactions())
+      fetchTransactions: () => dispatch(fetchTransactions()),
+      activateFilter: (name) => dispatch(activateFilter(name)),
   })
 )(
   class Categories extends React.Component {
@@ -40,9 +44,28 @@ export default connect(
             ).map(
               category => {
                 const dataToDisplay = data.filter(transaction => transaction.category === category)
-                return (
+                  const buttons = [
+                      {
+                          label: category,
+                          filterName: category+'_visible'
+                      }
+                  ]
+
+                  return (
                   <div key={category}>
-                    <h2>{category}</h2>
+                      {
+                          buttons.map(
+                              button => (
+                                  <Button
+                                      key={button.filterName}
+                                      onClick={() => this.props.activateFilter(button.filterName)}
+                                      //active={this.props.activeFilterNames.includes(button.filterName)}
+                                  >
+                                      {button.label}
+                                  </Button>
+                              )
+                          )
+                      }
                     <CategoryTransactions
                       transactions={dataToDisplay}
                     />
