@@ -36,6 +36,11 @@ export default class FirstPage extends React.Component {
                   <Button bsStyle="primary" bsSize="large" >Statystyki</Button>
                 </LinkContainer>
               </Col>
+              <Col xs={12} md={12} lg={12}>
+                <LinkContainer to="/login" className="login">
+                  <Button bsStyle="primary" bsSize="large" >Login</Button>
+                </LinkContainer>
+              </Col>
             </Row>
           </Grid>
         </div>
