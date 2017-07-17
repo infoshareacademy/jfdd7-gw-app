@@ -41,7 +41,7 @@ export default class MainMenu extends React.Component {
                 <NavItem>Kategorie</NavItem>
               </LinkContainer>
               <LinkContainer to="/stats">
-                <NavItem>Analiza</NavItem>
+                <NavItem>Statystyki</NavItem>
               </LinkContainer>
 
 
