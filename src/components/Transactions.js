@@ -32,18 +32,6 @@ export default connect(
         value_outcomes: transaction => transaction.value < 0
       }
 
-      // const dataToDisplay = data === null ? [] : data.filter(
-      //   student => (
-      //     student.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase()) ||
-      //     student.surname.toLowerCase().includes(this.props.searchPhrase.toLowerCase())
-      //   )
-      // ).filter(
-      //   student => this.props.activeFilterNames.map(
-      //     filterName => filters[filterName] || (() => true)
-      //   ).every(
-      //     f => f(student) === true
-      //   )
-      // )
 
       const buttons = [
         {
