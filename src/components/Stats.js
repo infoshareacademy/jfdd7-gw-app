@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {ListGroup, ListGroupItem} from 'react-bootstrap'
 import {fetchTransactions} from '../state/transactions'
 import {BarChart, XAxis, YAxis, Bar, ResponsiveContainer} from 'recharts'
+import {Nav, NavItem} from 'react-bootstrap'
 
 
 export default connect(
@@ -50,7 +51,15 @@ export default connect(
         })
       )
       return (
-        <div>Tu możesz podejrzeć swoje statystyki
+        <div>
+          <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
+            <NavItem eventKey="1" href="/home">NavItem 1 content</NavItem>
+            <NavItem eventKey="2" title="Item">NavItem 2 content</NavItem>
+            <NavItem eventKey="3" disabled>NavItem 3 content</NavItem>
+          </Nav>
+          <br/>
+          <br/>
+          <hr>
           <ResponsiveContainer height={300}>
             <BarChart data={totals}>
               <XAxis dataKey="category"/>
