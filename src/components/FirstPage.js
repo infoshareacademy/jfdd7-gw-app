@@ -1,10 +1,4 @@
 import React from 'react'
-// import FirstPageButton from './AddComponents/FirstPageButton'
-// import {BrowserRouter as Router, Route} from 'react-router-dom'
-// import Categories from './Categories'
-// import AddTransaction from './AddTransaction'
-// import Transactions from './Transactions'
-// import Stats from './Stats'
 import {Grid, Row, Col, Button} from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
 
