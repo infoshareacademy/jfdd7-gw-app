@@ -56,19 +56,19 @@ export default connect(
                                         {
                                             buttons.map(
                                                 button => (
-                                                    <Button
-                                                        key={button.filterName}
-                                                        onClick={() => this.props.activateFilter(button.filterName)}
-                                                        //active={this.props.activeFilterNames.includes(button.filterName)}
-                                                    >
-                                                        {button.label}
-                                                    </Button>
+                                                    <div>
+                                                        <Button
+                                                            key={button.filterName}
+                                                            onClick={() => this.props.activateFilter(button.filterName)}
+                                                            //active={this.props.activeFilterNames.includes(button.filterName)}
+                                                        >
+                                                            {button.label}
+                                                        </Button>
 
-                                                    {this.props.valuesFilters.activeFilterNames.include(button.filterName)
-                                                    ? <CategoryTransactions
-                                                    transactions={dataToDisplay}
-                                                    />
-                                                    : null}
+                                                        {this.props.activeFilterNames.includes(button.filterName)?
+                                                        <CategoryTransactions transactions={dataToDisplay} /> : null}
+
+                                                    </div>
                                                 )
                                             )
                                         }
