@@ -26,8 +26,6 @@ export default class FirstPage extends React.Component {
                   <Button bsStyle="primary" bsSize="large" >Historia</Button>
                 </LinkContainer>
               </Col>
-            {/*</Row>*/}
-            {/*<Row className="show-grid">*/}
               <Col xs={6} md={4} lg={3}>
                 <LinkContainer to="/add-transaction" className="custom">
                   <Button bsStyle="primary" bsSize="large">Dodaj wpis</Button>
