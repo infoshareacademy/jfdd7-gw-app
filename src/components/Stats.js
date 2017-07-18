@@ -59,7 +59,7 @@ export default connect(
           </Nav>
           <br/>
           <br/>
-          <hr>
+          <hr/>
           <ResponsiveContainer height={300}>
             <BarChart data={totals}>
               <XAxis dataKey="category"/>
