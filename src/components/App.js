@@ -15,6 +15,7 @@ import AddTransaction from './AddTransaction'
 import Transaction from './Transaction'
 import Transactions from './Transactions'
 import Stats from './Stats'
+import LoginPage from './LoginPage'
 import '../App.css'
 
 const App = () => (
@@ -31,6 +32,7 @@ const App = () => (
       <Route path="/transaction/:transactionId" component={Transaction}/>
       <Route exact path="/transactions" component={Transactions}/>
       <Route exact path="/stats" component={Stats}/>
+      <Route path="/login" component={LoginPage}/>
 
     </div>
   </Router>

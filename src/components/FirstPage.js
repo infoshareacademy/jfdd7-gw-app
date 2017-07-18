@@ -1,10 +1,4 @@
 import React from 'react'
-// import FirstPageButton from './AddComponents/FirstPageButton'
-// import {BrowserRouter as Router, Route} from 'react-router-dom'
-// import Categories from './Categories'
-// import AddTransaction from './AddTransaction'
-// import Transactions from './Transactions'
-// import Stats from './Stats'
 import {Grid, Row, Col, Button} from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
 
@@ -18,22 +12,27 @@ export default class FirstPage extends React.Component {
             <Row className="show-grid">
               <Col xs={6} md={4} lg={3}>
                 <LinkContainer to="/categories" className="custom">
-                  <Button bsStyle="primary" bsSize="large" >Kategorie</Button>
+                  <Button bsStyle="warning" bsSize="large" >Kategorie</Button>
                 </LinkContainer>
               </Col>
               <Col xs={6} md={4} lg={3}>
                 <LinkContainer to="/transactions" className="custom">
-                  <Button bsStyle="primary" bsSize="large" >Historia</Button>
+                  <Button bsStyle="danger" bsSize="large" >Historia</Button>
                 </LinkContainer>
               </Col>
               <Col xs={6} md={4} lg={3}>
                 <LinkContainer to="/add-transaction" className="custom">
-                  <Button bsStyle="primary" bsSize="large">Dodaj wpis</Button>
+                  <Button bsStyle="info" bsSize="large">Dodaj wpis</Button>
                 </LinkContainer>
               </Col>
               <Col xs={6} md={4} lg={3}>
                 <LinkContainer to="/stats" className="custom">
-                  <Button bsStyle="primary" bsSize="large" >Statystyki</Button>
+                  <Button bsStyle="info" bsSize="large" >Statystyki</Button>
+                </LinkContainer>
+              </Col>
+              <Col xs={12} md={12} lg={12}>
+                <LinkContainer to="/login" className="login">
+                  <Button bsStyle="primary" bsSize="large" >Login</Button>
                 </LinkContainer>
               </Col>
             </Row>

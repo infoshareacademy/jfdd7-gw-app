@@ -9,9 +9,7 @@ import image from '../pictures/logo.png'
 
 export default class MainMenu extends React.Component {
 
-  // linkClick() {
-  //
-  // }
+
 
   render() {
     return (
@@ -31,9 +29,6 @@ export default class MainMenu extends React.Component {
               <LinkContainer to="/add-transaction">
                 <NavItem>Dodaj transakcję</NavItem>
               </LinkContainer>
-              {/*<LinkContainer to="/add-category">*/}
-                {/*<NavItem>Dodaj kategorię</NavItem>*/}
-              {/*</LinkContainer>*/}
               <LinkContainer to="/transactions">
                 <NavItem>Historia transakcji</NavItem>
               </LinkContainer>
