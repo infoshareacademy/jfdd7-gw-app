@@ -15,6 +15,8 @@ import AddTransaction from './AddTransaction'
 import Transaction from './Transaction'
 import Transactions from './Transactions'
 import Stats from './Stats'
+import Calendar from './Calendar'
+import StatsApplePieView from './StatsApplePieView'
 import LoginPage from './LoginPage'
 import '../App.css'
 
@@ -33,6 +35,8 @@ const App = () => (
       <Route exact path="/transactions" component={Transactions}/>
       <Route exact path="/stats" component={Stats}/>
       <Route path="/login" component={LoginPage}/>
+      <Route path="/statsApplePieView" component={StatsApplePieView}/>
+      <Route path="/calendar" component={Calendar}/>
 
     </div>
   </Router>
