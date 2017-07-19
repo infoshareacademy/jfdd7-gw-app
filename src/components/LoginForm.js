@@ -5,7 +5,7 @@ import React from 'react';
 
 
 
-import {FormGroup, Col, ControlLabel, FormControl, Button} from 'react-bootstrap'
+import {FormGroup, Col, FormControl, Button} from 'react-bootstrap'
 
 
 export default class LoginForm extends React.Component {
@@ -21,7 +21,7 @@ export default class LoginForm extends React.Component {
                     {/*<Col componentClass={ControlLabel} sm={2}>*/}
                         {/*Email*/}
                     {/*</Col>*/}
-                    <Col sm={12}>
+                    <Col sm={12} md={6} lg={12}>
                         <FormControl type="email" placeholder="Email" />
                     </Col>
                 </FormGroup>
@@ -30,7 +30,7 @@ export default class LoginForm extends React.Component {
                     {/*<Col componentClass={ControlLabel} sm={2}>*/}
                         {/*Password*/}
                     {/*</Col>*/}
-                    <Col sm={12}>
+                    <Col sm={12} md={6} lg={12}>
                         <FormControl type="password" placeholder="Password" />
                         <Button block
                                 bsStyle="warning"
@@ -44,11 +44,4 @@ export default class LoginForm extends React.Component {
     }
 }
 
-// LoginForm.propTypes = {
-//     login: React.PropTypes.func.isRequired
-// }
-//
-// LoginForm.contextTypes = {
-//     router: React.PropTypes.object.isRequired
-// }
 
