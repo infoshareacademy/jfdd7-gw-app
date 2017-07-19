@@ -2,7 +2,8 @@ import React from 'react'
 import {Grid} from 'react-bootstrap'
 import {connect} from 'react-redux'
 import {Doughnut} from 'react-chartjs'
-
+import PieChart from 'react-svg-piechart'
+import {expandedSector} from 'react-svg-piechart'
 
 
 export default connect(
@@ -11,10 +12,23 @@ export default connect(
   })
 )(
   class StatsApplePieView extends React.Component {
+    constructor() {
+      super()
+
+      this.state = {
+        expandedSector: null,
+      }
+
+      this.handleMouseEnterOnSector = this.handleMouseEnterOnSector.bind(this)
+    }
+
+    handleMouseEnterOnSector(sector) {
+      this.setState({expandedSector: sector})
+    }
 
 
     render() {
-      const transactions = this.props.transactions === null ? [{value: 10}, {value: 20}] : this.props.transactions
+      const transactions = this.props.transactions === null ? [] : this.props.transactions
       const sumValuesOfOneCategory = category =>
         transactions.filter(
           transaction => transaction.category === category
@@ -35,12 +49,37 @@ export default connect(
           label: category
         })
       )
+
       return (
 
         <Grid>
+//donat
+          {/*<Doughnut data={totals} maxWidth={500}/>*/}
+//pie
+          {/*<div className="Pie" style={{maxHeight: 500, maxWidth: 500}}>*/}
+            {/*<PieChart*/}
+              {/*data={ totals }*/}
+              {/*expandedSector={expandedSector}*/}
+              {/*onSectorHover={this.handleMouseEnterOnSector}*/}
+              {/*sectorStrokeWidth={2}*/}
+              {/*expandOnHover*/}
+              {/*shrinkOnTouchEnd*/}
+            {/*/>*/}
+            {/*<div>*/}
+              {/*{*/}
+                {/*totals.map((element, i) => (*/}
+                  {/*<div key={i}>*/}
+                    {/*<span style={{background: this.element}}></span>*/}
+                    {/*<span style={{fontWeight: this.state.expandedSector === i ? "bold" : null}}>*/}
+                                {/*{element.label} : {element.value}*/}
+                            {/*</span>*/}
+                  {/*</div>*/}
+                {/*))*/}
+              {/*}*/}
+            {/*</div>*/}
+          {/*</div>*/}
 
-          <Doughnut data={totals}/>
-
+          https://rma-consulting.github.io/react-easy-chart/
         </Grid>
       )
     }
