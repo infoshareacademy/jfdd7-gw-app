@@ -83,7 +83,7 @@ export default connect(
                     <td>
                       { transaction.date }
                     </td>
-                    <td>
+                    <td style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
                       { transaction.value }
                     </td>
                     <td>
