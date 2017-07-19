@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: rgba(249, 220, 152, 0.5); }
+  background-color: rgb(241, 196, 109
+  ); }
 
 .custom {
   width: 100%;
@@ -16,6 +17,17 @@ body {
   width: 100%;
   height: 160px;
   background-repeat: no-repeat;
-  background-color: #623693; }
+  background-color: #931918; }
+
+.loginLogo{
+  background-image: url('./pictures/img_avatar2.png');
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+    border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
 
 /*# sourceMappingURL=index.css.map */
