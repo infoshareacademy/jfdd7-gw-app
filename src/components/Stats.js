@@ -9,18 +9,11 @@ import {Grid} from 'react-bootstrap'
 export default connect(
   state => ({
     transactions: state.transactions.data
-  }),
-  dispatch => ({
-    fetchTransactions: () => dispatch(fetchTransactions())
-
   })
 )(
   class Stats extends React.Component {
 
-    componentWillMount() {
-      this.props.fetchTransactions()
 
-    }
 
 //filtrem po kategoriach i reduce dla kazdej kat.
     render() {
@@ -61,17 +54,17 @@ export default connect(
                    label=""/>
             </BarChart>
           </ResponsiveContainer>
-          <ListGroup>
-            {
-              transactions.map(
-                transaction => (
-                  <ListGroupItem key={transaction.id}>{transaction.category}
-                    <br/>
-                    {transaction.value}</ListGroupItem>
-                )
-              )
-            }
-          </ListGroup>
+          {/*<ListGroup>*/}
+            {/*{*/}
+              {/*transactions.map(*/}
+                {/*transaction => (*/}
+                  {/*<ListGroupItem key={transaction.id}>{transaction.category}*/}
+                    {/*<br/>*/}
+                    {/*{transaction.value}</ListGroupItem>*/}
+                {/*)*/}
+              {/*)*/}
+            {/*}*/}
+          {/*</ListGroup>*/}
         </Grid>
       )
     }
