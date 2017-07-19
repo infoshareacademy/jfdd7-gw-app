@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchTransactions} from '../state/transactions'
 import CategoryTransactions from './CategoryTransactions'
-import {Button} from 'react-bootstrap'
+import {Button, Grid, Row, Col, Well} from 'react-bootstrap'
 import {activateFilter} from '../state/valuesFilters'
 
 // import {} from 'react-bootstrap'
@@ -28,8 +28,16 @@ export default connect(
             const {data, fetching, error} = this.props.transactions
 
             return (
-                <div className="Categories">
-                    <h1>KATEGORIE</h1>
+              <Grid className="Categories">
+                <div>
+                  <Row>
+                    <h1 className="text-center">KATEGORIE</h1>
+                  </Row>
+                  {/*<Row className="show-grid">*/}
+                    {/*<Col xs={6} md={2}></Col>*/}
+                    {/*<Col xs={12} md={8}>KATEGORIE</Col>*/}
+                    {/*<Col xs={6} md={2}></Col>*/}
+                  {/*</Row>*/}
 
                     { error === null ? null : <p>{error.message}</p> }
                     { fetching === false ? null : <p>Fetching data...</p>}
@@ -56,19 +64,22 @@ export default connect(
                                         {
                                             buttons.map(
                                                 button => (
-                                                    <div>
-                                                        <Button
+                                                    <Row>
+
+                                                        <Button block
+                                                            bsStyle="primary"
                                                             key={button.filterName}
                                                             onClick={() => this.props.activateFilter(button.filterName)}
-                                                            //active={this.props.activeFilterNames.includes(button.filterName)}
+                                                            active={this.props.activeFilterNames.includes(button.filterName)}
                                                         >
-                                                            {button.label}
+                                                            {(button.label).toUpperCase() }
                                                         </Button>
+
 
                                                         {this.props.activeFilterNames.includes(button.filterName)?
                                                         <CategoryTransactions transactions={dataToDisplay} /> : null}
 
-                                                    </div>
+                                                    </Row>
                                                 )
                                             )
                                         }
@@ -80,6 +91,7 @@ export default connect(
 
 
                 </div>
+              </Grid>
             )
         }
     })
