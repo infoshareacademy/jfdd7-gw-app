@@ -36,11 +36,13 @@ export default connect(
       const buttons = [
         {
           label: 'Incomes',
-          filterName: 'value_incomes'
+          filterName: 'value_incomes',
+          style: 'success'
         },
         {
           label: 'Outcomes',
-          filterName: 'value_outcomes'
+          filterName: 'value_outcomes',
+          style: 'danger'
         },
 
       ]
@@ -51,6 +53,7 @@ export default connect(
             buttons.map(
               button => (
                 <Button
+                  bsStyle={button.style}
                   key={button.filterName}
                   onClick={() => this.props.activateFilter(button.filterName)}
                   active={this.props.activeFilterNames.includes(button.filterName)}
