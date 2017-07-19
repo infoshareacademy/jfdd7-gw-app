@@ -60,7 +60,7 @@ export default connect(
               )
             )
           }
-          <Button onClick={this.props.resetFilters}>Reset</Button>
+          <Button onClick={this.props.resetFilters}>All transactions</Button>
           <Table bordered striped hover responsive>
             <thead>
             <tr>

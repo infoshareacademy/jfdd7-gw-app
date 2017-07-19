@@ -36,7 +36,7 @@ export default class FirstPage extends React.Component {
               </Col>
               <Col xs={6} md={4} lg={3}>
                 <LinkContainer to="/stats" className="custom">
-                  <Button bsStyle="info" bsSize="large" >
+                  <Button bsStyle="primary" bsSize="large" >
                     Statystyki
                     <Glyphicon glyph="glyphicon glyphicon-signal gi-5x" style={{display: 'block'}} />
                   </Button>
