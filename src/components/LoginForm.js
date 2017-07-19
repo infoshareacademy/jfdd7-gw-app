@@ -14,7 +14,7 @@ export default class LoginForm extends React.Component {
 
 
         return (
-            <div>
+            <div className="loginDiv">
                 <div className="loginLogo"></div>
                 <FormGroup controlId="formHorizontalEmail">
 
