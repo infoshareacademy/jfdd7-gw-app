@@ -67,7 +67,7 @@ export default connect(
                                                     <Row>
 
                                                         <Button block
-                                                            bsStyle="primary"
+                                                            bsStyle="warning"
                                                             key={button.filterName}
                                                             onClick={() => this.props.activateFilter(button.filterName)}
                                                             active={this.props.activeFilterNames.includes(button.filterName)}
