@@ -5996,8 +5996,8 @@
   {
     "id": 1000,
     "date": "2/19/2017",
-    "value": -8701.13,
-    "category": "alko"
+    "value": 1008701.13,
+    "category": "zwierzaki"
   },
   {
     "id": 1001,
@@ -6022,5 +6022,17 @@
     "date": "12/19/2016",
     "value": 128701.13,
     "category": "wpływy"
+  },
+  {
+    "id": 1005,
+    "date": "12/19/2016",
+    "value": -127010.13,
+    "category": "coś tam"
+  },
+  {
+    "id": 1006,
+    "date": "12/19/2016",
+    "value": -108701.13,
+    "category": "następny wydatek"
   }
 ]
