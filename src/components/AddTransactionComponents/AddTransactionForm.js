@@ -1,11 +1,12 @@
 import React from 'react'
-import {FormControl, FormGroup, ControlLabel } from 'react-bootstrap'
+import {FormControl, FormGroup, ControlLabel} from 'react-bootstrap'
 
 
 export default class AddTransactionForm extends React.Component {
 
   render () {
     return (
+      <div>
       <form>
         <FormGroup bsSize="large">
           <FormControl type="text" placeholder="Kwota" />
@@ -24,6 +25,7 @@ export default class AddTransactionForm extends React.Component {
           </FormControl>
         </FormGroup>
       </form>
+        </div>
     )
   }
 }
