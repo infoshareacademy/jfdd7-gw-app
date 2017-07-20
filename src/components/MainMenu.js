@@ -38,6 +38,9 @@ export default class MainMenu extends React.Component {
               <LinkContainer to="/stats">
                 <NavItem>Statystyki</NavItem>
               </LinkContainer>
+              <LinkContainer to="/ocr">
+                <NavItem>Ocr</NavItem>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

@@ -16,6 +16,7 @@ import Transaction from './Transaction'
 import Transactions from './Transactions'
 import Stats from './Stats'
 import LoginPage from './LoginPage'
+import Ocr from './Ocr'
 import '../App.css'
 
 const App = () => (
@@ -33,6 +34,7 @@ const App = () => (
       <Route exact path="/transactions" component={Transactions}/>
       <Route exact path="/stats" component={Stats}/>
       <Route path="/login" component={LoginPage}/>
+      <Route path="/ocr" component={Ocr}/>
 
     </div>
   </Router>
