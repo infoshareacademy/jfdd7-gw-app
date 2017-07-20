@@ -4,7 +4,7 @@ const FETCH__SUCCESS = 'transactions/FETCH__SUCCESS'
 const FETCH__FAIL = 'transactions/FETCH__FAIL'
 const ADD = 'transactions/ADD'
 
-const add = transaction => ({
+export const add = transaction => ({
   type: ADD,
   transaction
 })
