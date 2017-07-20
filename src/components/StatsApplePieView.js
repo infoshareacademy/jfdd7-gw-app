@@ -37,49 +37,52 @@ export default connect(
           0
         ).toFixed(2)
 
+      const colors = ['red', 'green', 'blue', 'lightblue', 'grey', 'yellow', 'pink', 'brown', 'black', 'white']
+
       const totals = transactions.filter(transaction => transaction.value < 0
       ).map(
         transaction => transaction.category
       ).filter(
         (item, index, allItems) => allItems.indexOf(item) === index
       ).map(
-        category => ({
+        (category, index) => ({
           value: Math.abs(parseFloat(sumValuesOfOneCategory(category))),
           category: category,
-          label: category
+          label: category,
+          color: colors[index % colors.length]
         })
       )
 
       return (
 
         <Grid>
-//donat
-          {/*<Doughnut data={totals} maxWidth={500}/>*/}
-//pie
-          {/*<div className="Pie" style={{maxHeight: 500, maxWidth: 500}}>*/}
-            {/*<PieChart*/}
-              {/*data={ totals }*/}
-              {/*expandedSector={expandedSector}*/}
-              {/*onSectorHover={this.handleMouseEnterOnSector}*/}
-              {/*sectorStrokeWidth={2}*/}
-              {/*expandOnHover*/}
-              {/*shrinkOnTouchEnd*/}
-            {/*/>*/}
-            {/*<div>*/}
-              {/*{*/}
-                {/*totals.map((element, i) => (*/}
-                  {/*<div key={i}>*/}
-                    {/*<span style={{background: this.element}}></span>*/}
-                    {/*<span style={{fontWeight: this.state.expandedSector === i ? "bold" : null}}>*/}
-                                {/*{element.label} : {element.value}*/}
-                            {/*</span>*/}
-                  {/*</div>*/}
-                {/*))*/}
-              {/*}*/}
-            {/*</div>*/}
-          {/*</div>*/}
 
-          https://rma-consulting.github.io/react-easy-chart/
+          <Doughnut data={totals} maxWidth={500}/>
+
+          <div className="Pie" style={{maxHeight: 500, maxWidth: 500}}>
+            <PieChart
+              data={ totals }
+              expandedSector={expandedSector}
+              onSectorHover={this.handleMouseEnterOnSector}
+              sectorStrokeWidth={2}
+              expandOnHover
+              shrinkOnTouchEnd
+            />
+            <div>
+              {
+                totals.map((element, i) => (
+                  <div key={i}>
+                    <span style={{background: element.color, margin: 10}}>tukolor!!!!!!!!!!</span>
+                    <span style={{fontWeight: this.state.expandedSector === i ? "bold" : null}}>
+                                {element.label} : {element.value}
+                            </span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+          {/*https://rma-consulting.github.io/react-easy-chart/*/}
         </Grid>
       )
     }
