@@ -21,7 +21,7 @@ export default class LoginForm extends React.Component {
                     {/*<Col componentClass={ControlLabel} sm={2}>*/}
                         {/*Email*/}
                     {/*</Col>*/}
-                    <Col sm={12} md={6} lg={12}>
+                    <Col sm={12} >
                         <FormControl type="email" placeholder="Email" />
                     </Col>
                 </FormGroup>
@@ -30,7 +30,7 @@ export default class LoginForm extends React.Component {
                     {/*<Col componentClass={ControlLabel} sm={2}>*/}
                         {/*Password*/}
                     {/*</Col>*/}
-                    <Col sm={12} md={6} lg={12}>
+                    <Col sm={12} >
                         <FormControl type="password" placeholder="Password" />
                         <Button block
                                 bsStyle="warning"
