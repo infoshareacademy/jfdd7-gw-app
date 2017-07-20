@@ -46,9 +46,6 @@ export default class MainMenu extends React.Component {
                   <NavItem>Kalendarz</NavItem>
                 </LinkContainer>
               </NavDropdown>
-
-
-
             </Nav>
           </Navbar.Collapse>
         </Navbar>
