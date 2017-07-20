@@ -2,6 +2,12 @@
 const FETCH__BEGIN = 'transactions/FETCH__BEGIN'
 const FETCH__SUCCESS = 'transactions/FETCH__SUCCESS'
 const FETCH__FAIL = 'transactions/FETCH__FAIL'
+const ADD = 'transactions/ADD'
+
+const add = transaction => ({
+  type: ADD,
+  transaction
+})
 
 // action creators
 const fetchBegin = () => ({
@@ -59,6 +65,11 @@ export default (state = initialState, action = {}) => {
         ...state,
         error: action.error,
         fetching: false
+      }
+    case ADD:
+      return {
+        ...state,
+        data: [action.transaction].concat(state.data)
       }
     default:
       return state
