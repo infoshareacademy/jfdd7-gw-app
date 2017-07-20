@@ -2,7 +2,7 @@
  * Created by mateusztarsinski on 05.07.17.
  */
 import React from 'react'
-import {Nav, NavItem, NavDropdown, Navbar} from 'react-bootstrap'
+import {Nav, NavItem, NavDropdown, Navbar, MenuItem} from 'react-bootstrap'
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 
 import image from '../pictures/logo.png'
@@ -46,9 +46,6 @@ export default class MainMenu extends React.Component {
                   <NavItem>Kalendarz</NavItem>
                 </LinkContainer>
               </NavDropdown>
-
-
-
             </Nav>
           </Navbar.Collapse>
         </Navbar>
