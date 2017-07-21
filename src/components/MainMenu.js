@@ -35,12 +35,17 @@ export default class MainMenu extends React.Component {
               <LinkContainer to="/categories">
                 <NavItem>Kategorie</NavItem>
               </LinkContainer>
-              <LinkContainer to="/stats">
-                <NavItem>Statystyki</NavItem>
-              </LinkContainer>
-              <LinkContainer to="/ocr">
-                <NavItem>Ocr</NavItem>
-              </LinkContainer>
+              <NavDropdown eventKey={3} title="Statystyki" id="basic-nav-dropdown">
+                <LinkContainer to="/stats">
+                  <NavItem>Wykres</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/statsApplePieView">
+                  <NavItem>ApplePie :)</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/calendar">
+                  <NavItem>Kalendarz</NavItem>
+                </LinkContainer>
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

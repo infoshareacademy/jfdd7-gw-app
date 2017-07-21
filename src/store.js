@@ -3,7 +3,7 @@
  */
 import  { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import transactions from './state/transactions'
+import transactions, { fetchTransactions } from './state/transactions'
 import valuesFilters from './state/valuesFilters'
 
 const reducer = combineReducers({
@@ -17,5 +17,7 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
     thunk
   )
 ))
+
+store.dispatch(fetchTransactions())
 
 export default store
