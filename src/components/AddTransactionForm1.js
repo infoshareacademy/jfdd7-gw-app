@@ -4,7 +4,7 @@
 import React from 'react'
 import firebase from 'firebase'
 
-class AddTansactionForm extends React.Component {
+class AddTransactionForm1 extends React.Component {
 
   state = {
     transactions: []
@@ -39,4 +39,4 @@ class AddTansactionForm extends React.Component {
   }
 }
 
-export default AddTransactionForm
+export default AddTransactionForm1

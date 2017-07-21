@@ -29,6 +29,9 @@ export default class MainMenu extends React.Component {
               <LinkContainer to="/add-transaction">
                 <NavItem>Dodaj transakcję</NavItem>
               </LinkContainer>
+              <LinkContainer to="/add-transaction1">
+                <NavItem>Dodaj transakcję1</NavItem>
+              </LinkContainer>
               <LinkContainer to="/transactions">
                 <NavItem>Historia transakcji</NavItem>
               </LinkContainer>
