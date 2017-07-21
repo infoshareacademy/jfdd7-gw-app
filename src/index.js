@@ -8,6 +8,7 @@ import './index.css'
 import App from './components/App'
 import firebase from 'firebase'
 import { syncUser } from './state/auth'
+import LoginForm from './components/LoginForm'
 
 firebase.initializeApp({
   apiKey: "AIzaSyCDaaDWi8xmUACC74ngttQsjEMO2zHBSRw",
