@@ -36,8 +36,6 @@ class RegisterUser extends React.Component {
             this.state.email,
             this.state.password
         ).then(
-            ()=> this.setState({message: 'New user created'})
-        ).then(
             user => {
                 //console.log(user)
                 user.updateProfile({
@@ -46,6 +44,8 @@ class RegisterUser extends React.Component {
                     () => this.props.syncUser({...user})
                 )
             }
+        ).then(
+            ()=> this.setState({message: 'New user created'})
         )
     }
 
