@@ -23,6 +23,7 @@
     "update": "^0.7.4"
   },
   "scripts": {
+    "preinstall": "npm config set package-lock false",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
