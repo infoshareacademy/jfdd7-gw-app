@@ -47,7 +47,7 @@ class LoginForm extends React.Component {
     return (
       <div className="loginDiv">
         <form onSubmit={this.handleSubmit}>
-          <div className="loginLogo"></div>
+
           <FormGroup controlId="formHorizontalEmail"
           >
             <p>{this.state.message}</p>
@@ -82,7 +82,7 @@ class LoginForm extends React.Component {
           </FormGroup>
 
         </form>
-        <RegisterUser/>
+
       </div>
     )
   }
