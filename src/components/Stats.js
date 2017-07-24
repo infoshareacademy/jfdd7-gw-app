@@ -4,6 +4,8 @@ import {ListGroup, ListGroupItem} from 'react-bootstrap'
 import {fetchTransactions} from '../state/transactions'
 import {BarChart, XAxis, YAxis, Bar, ResponsiveContainer} from 'recharts'
 import {Grid} from 'react-bootstrap'
+import StatsApplePieView from './StatsApplePieView'
+
 
 
 export default connect(
@@ -45,7 +47,7 @@ export default connect(
       )
       return (
         <Grid>
-
+          <div className="hidden-xs">
           <ResponsiveContainer height={400}>
             <BarChart data={totals}>
               <XAxis dataKey="category"/>
@@ -54,17 +56,8 @@ export default connect(
                    label=""/>
             </BarChart>
           </ResponsiveContainer>
-          {/*<ListGroup>*/}
-            {/*{*/}
-              {/*transactions.map(*/}
-                {/*transaction => (*/}
-                  {/*<ListGroupItem key={transaction.id}>{transaction.category}*/}
-                    {/*<br/>*/}
-                    {/*{transaction.value}</ListGroupItem>*/}
-                {/*)*/}
-              {/*)*/}
-            {/*}*/}
-          {/*</ListGroup>*/}
+          </div>
+          <StatsApplePieView/>
         </Grid>
       )
     }

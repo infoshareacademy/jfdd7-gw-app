@@ -1,7 +1,6 @@
 import React from 'react'
 import {Grid} from 'react-bootstrap'
 import {connect} from 'react-redux'
-import {Doughnut} from 'react-chartjs'
 import PieChart from 'react-svg-piechart'
 import {expandedSector} from 'react-svg-piechart'
 
@@ -57,25 +56,20 @@ export default connect(
 
         <Grid>
 
-          <Doughnut data={totals} maxWidth={500}/>
 
-          <div className="Pie" style={{maxHeight: 500, maxWidth: 500}}>
+
+          <div className="Pie" style={{maxHeight: 500, maxWidth: 500, margin: 'auto'}}>
             <PieChart
               data={ totals }
-              expandedSector={expandedSector}
-              onSectorHover={this.handleMouseEnterOnSector}
-              sectorStrokeWidth={2}
-              expandOnHover
-              shrinkOnTouchEnd
             />
-            <div>
+            <div style={{lineHeight: 0.4}}>
               {
                 totals.map((element, i) => (
-                  <div key={i}>
-                    <span style={{background: element.color, margin: 10}}>tukolor!!!!!!!!!!</span>
-                    <span style={{fontWeight: this.state.expandedSector === i ? "bold" : null}}>
+                  <div key={i} style={{fontSize: 15, margin: 0, padding: 0}}>
+                    <span style={{color: element.color, margin: 0, padding: 0, marginRight: 10, fontSize:50, position: 'relative', top: 10}}>&bull;</span>
+                    <span style={{fontWeight: "bold", lineHeight: 1}}>
                                 {element.label} : {element.value}
-                            </span>
+                    </span>
                   </div>
                 ))
               }
