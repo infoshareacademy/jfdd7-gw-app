@@ -54,30 +54,26 @@ export default connect(
 
       return (
 
-        <Grid>
-
-
-
-          <div className="Pie" style={{maxHeight: 500, maxWidth: 500, margin: 'auto'}}>
-            <PieChart
-              data={ totals }
+<Grid>
+            <PieChart className="col-xs-12 col-sm-6"
+                      data={ totals }
+                      expandedSector={expandedSector}
+                      onSectorHover={this.handleMouseEnterOnSector}
             />
-            <div style={{lineHeight: 0.4}}>
+            <div className='col-sm-3' style={{lineHeight: 0.4}}>
               {
                 totals.map((element, i) => (
                   <div key={i} style={{fontSize: 15, margin: 0, padding: 0}}>
                     <span style={{color: element.color, margin: 0, padding: 0, marginRight: 10, fontSize:50, position: 'relative', top: 10}}>&bull;</span>
-                    <span style={{fontWeight: "bold", lineHeight: 1}}>
-                                {element.label} : {element.value}
+                    <span style={{fontWeight: this.state.expandedSector === i ? "bold" : null, lineHeight: 1}}>
+                      <b>{element.label + ': '}</b> {element.value}
                     </span>
                   </div>
                 ))
               }
             </div>
-          </div>
 
-          {/*https://rma-consulting.github.io/react-easy-chart/*/}
-        </Grid>
+</Grid>
       )
     }
   }

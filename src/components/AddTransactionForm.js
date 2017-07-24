@@ -35,7 +35,10 @@ export default connect(
                 />
               </FormGroup>
               <FormGroup bsSize="large">
-                <FormControl type="text" placeholder="Tytuł"/>
+                <FormControl
+                  type="text"
+                  placeholder="Tytuł"
+                />
               </FormGroup>
               <FormGroup controlId="formControlsSelectMultiple">
                 <ControlLabel>Kategoria</ControlLabel>
