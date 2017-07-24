@@ -18,7 +18,7 @@ import Stats from './Stats'
 import Calendar from './Calendar'
 import StatsApplePieView from './StatsApplePieView'
 import LoginPage from './LoginPage'
-import AddTansactionForm1 from './AddTransactionForm1'
+import AddTansaction1 from './AddTransaction1'
 import '../App.css'
 
 const App = () => (
@@ -32,7 +32,7 @@ const App = () => (
       <Route path="/add-category" component={AddCategory}/>
       <Route path="/categories" component={Categories}/>
       <Route path="/add-transaction" component={AddTransaction}/>
-      <Route path="/add-transaction1" component={AddTansactionForm1}/>
+      <Route path="/add-transaction1" component={AddTansaction1}/>
       <Route path="/transaction/:transactionId" component={Transaction}/>
       <Route exact path="/transactions" component={Transactions}/>
       <Route exact path="/stats" component={Stats}/>
