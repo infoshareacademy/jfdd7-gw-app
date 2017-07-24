@@ -7,21 +7,6 @@ import 'bootstrap/dist/css/bootstrap-theme.css'
 import './index.css'
 import Auth from './components/Auth'
 import App from './components/App'
-import firebase from 'firebase'
-import { syncUser } from './state/auth'
-//import LoginForm from './components/LoginForm'
-
-firebase.initializeApp({
-  apiKey: "AIzaSyCDaaDWi8xmUACC74ngttQsjEMO2zHBSRw",
-  authDomain: "jfdd7-app.firebaseapp.com",
-  databaseURL: "https://jfdd7-app.firebaseio.com",
-  projectId: "jfdd7-app",
-  storageBucket: "jfdd7-app.appspot.com",
-  messagingSenderId: "287623145678"
-})
-
-firebase.auth().onAuthStateChanged(user => store.dispatch(syncUser(user)))
-
 
 ReactDOM.render(
   <Provider store={store}>

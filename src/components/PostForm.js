@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { updatePost, createPost} from '../state/posts'
+import { updateTransaction, createTransaction} from '../state/posts'
 
 class PostForm extends React.Component {
 
@@ -16,10 +16,10 @@ class PostForm extends React.Component {
     event.preventDefault()
 
     if (uid === null) {
-      this.props.createPost({ content })
+      this.props.createTransaction({ content })
       this.setState({ content: '' })
     } else {
-      this.props.updatePost(uid, { content })
+      this.props.updateTransaction(uid, { content })
     }
   }
 
@@ -45,7 +45,7 @@ class PostForm extends React.Component {
 export default connect(
   null,
   dispatch => ({
-    createPost: data => dispatch(createPost(data)),
-    updatePost: (uid, data) => dispatch(updatePost(uid, data))
+    createTransaction: data => dispatch(createTransaction(data)),
+    updateTransaction: (uid, data) => dispatch(updateTransaction(uid, data))
   })
 )(PostForm)

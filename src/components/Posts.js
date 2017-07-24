@@ -1,39 +1,39 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { deletePost } from '../state/posts'
-import { favPost } from '../state/favs'
+import { deleteTransaction } from '../state/posts'
+//import { favPost } from '../state/favs'
 
 import PostForm from '../../../jfdd7-gw-app/src/components/PostForm'
 
-const Posts = ({ posts, favedPostIds, handleDeletePostClick, handleFavPostClick }) => (
+const Transactions = ({ transactions, favedTransactionIds, handleDeleteTransactionClick, handleFavTransactionClick }) => (
   <div>
-    <h2>Posts</h2>
+    <h2>Transactions</h2>
     {
-      posts.data === null ?
-        <p>Loading posts...</p> :
-        posts.data.length === 0 ?
-          <p>No posts to display</p> :
-          posts.data.slice().reverse().map(
-            post => (
-              <div key={post.uid}>
+      transactions.data === null ?
+        <p>Loading transactions...</p> :
+        transactions.data.length === 0 ?
+          <p>No transactions to display</p> :
+          transactions.data.slice().reverse().map(
+            transaction => (
+              <div key={transaction.uid}>
                 <p>
-                  <strong>{post.author}:</strong> {post.content}
+                  <strong>{transaction.author}:</strong> {transaction.content}
                 </p>
 
-                <PostForm uid={post.uid} content={post.content} label="Update"/>
+                <PostForm uid={transaction.uid} content={transaction.content} label="Update"/>
 
-                <button data-uid={post.uid} onClick={handleDeletePostClick}>
+                <button data-uid={transaction.uid} onClick={handleDeleteTransactionClick}>
                   Delete
                 </button>
 
-                <button data-uid={post.uid} onClick={handleFavPostClick}>
-                  {
-                    favedPostIds === null ?
-                      '...' :
-                      favedPostIds[post.uid] === true ?
-                        <span>&hearts;</span> : ''
-                  } Fav
-                </button>
+                {/*<button data-uid={transaction.uid} onClick={handleFavTransactionClick}>*/}
+                  {/*{*/}
+                    {/*favedTransactionIds === null ?*/}
+                      {/*'...' :*/}
+                      {/*favedTransactionIds[transaction.uid] === true ?*/}
+                        {/*<span>&hearts;</span> : ''*/}
+                  {/*} Fav*/}
+                {/*</button>*/}
                 <hr />
               </div>
             )
@@ -44,11 +44,11 @@ const Posts = ({ posts, favedPostIds, handleDeletePostClick, handleFavPostClick 
 
 export default connect(
   state => ({
-    posts: state.posts,
-    favedPostIds: state.favs.postIds
+    transactions: state.posts,
+    favedTransactionIds: state.favs.transactionIds
   }),
   dispatch => ({
-    handleDeletePostClick: event => dispatch(deletePost(event.target.dataset.uid)),
-    handleFavPostClick: event => dispatch(favPost(event.target.dataset.uid))
+    handleDeleteTransactionClick: event => dispatch(deleteTransaction(event.target.dataset.uid))
+    // handleFavTransactionClick: event => dispatch(favTransaction(event.target.dataset.uid))
   })
-)(Posts)
+)(Transactions)
