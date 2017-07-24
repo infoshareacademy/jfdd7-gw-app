@@ -6,11 +6,15 @@ import thunk from 'redux-thunk'
 import transactions, { fetchTransactions } from './state/transactions'
 import valuesFilters from './state/valuesFilters'
 import auth from './state/auth'
+import posts from './state/posts'
+import favs from './state/favs'
 
 const reducer = combineReducers({
   transactions,
   valuesFilters,
-  auth
+  auth,
+  posts,
+  favs
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

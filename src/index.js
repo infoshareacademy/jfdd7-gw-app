@@ -5,10 +5,11 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import './index.css'
+import Auth from './components/Auth'
 import App from './components/App'
 import firebase from 'firebase'
 import { syncUser } from './state/auth'
-import LoginForm from './components/LoginForm'
+//import LoginForm from './components/LoginForm'
 
 firebase.initializeApp({
   apiKey: "AIzaSyCDaaDWi8xmUACC74ngttQsjEMO2zHBSRw",
@@ -24,7 +25,9 @@ firebase.auth().onAuthStateChanged(user => store.dispatch(syncUser(user)))
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+    <Auth>
+      <App/>
+    </Auth>
   </Provider>,
   document.getElementById('root')
 )
