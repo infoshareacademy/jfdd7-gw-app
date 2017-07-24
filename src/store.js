@@ -5,10 +5,12 @@ import  { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import transactions, { fetchTransactions } from './state/transactions'
 import valuesFilters from './state/valuesFilters'
+import auth from './state/auth'
 
 const reducer = combineReducers({
   transactions,
-  valuesFilters
+  valuesFilters,
+  auth
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
