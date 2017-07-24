@@ -3,15 +3,15 @@
  */
 import React from 'react'
 import { connect } from 'react-redux'
-import SignInForm from './SignInForm'
-import SignUpForm from './SignUpForm'
+import LoginPage from "./LoginPage";
+// import SignInForm from './components/SignInForm'
+// import SignUpForm from './components/SignUpForm'
 
 const Auth = ({ user, children }) => (
   user !== null ?
     children :
     <div>
-      <SignInForm/>
-      <SignUpForm/>
+      <LoginPage/>
     </div>
 )
 
