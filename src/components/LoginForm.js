@@ -6,7 +6,6 @@ import firebase from 'firebase'
 import {syncUser} from '../state/auth'
 import {connect} from 'react-redux'
 import RegisterUser from './RegisterUser'
-import translate from 'google-translate-api'
 
 import {FormGroup, Col, FormControl, Button} from 'react-bootstrap'
 
@@ -30,8 +29,6 @@ class LoginForm extends React.Component {
     })
   }
 
-
-
   handleSubmit = event => {
 
     event.preventDefault()
@@ -41,9 +38,7 @@ class LoginForm extends React.Component {
     ).then(
       () => this.setState({message: 'User logged in'})
     ).catch(
-      error => translate(error.message, {from: 'en', to: 'pl'}).then(
-          res => this.setState({message: res})
-    )
+      error => this.setState({message: error.message})
     )
   }
 
