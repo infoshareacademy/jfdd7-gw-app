@@ -30,3 +30,6 @@ body {
   margin: 30px auto 10px; }
 
 /*# sourceMappingURL=index.css.map */
+.horizontal{
+  display: inline-block;
+}

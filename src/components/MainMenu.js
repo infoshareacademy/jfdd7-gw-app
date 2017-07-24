@@ -2,7 +2,7 @@
  * Created by mateusztarsinski on 05.07.17.
  */
 import React from 'react'
-import {Nav, NavItem, NavDropdown, Navbar} from 'react-bootstrap'
+import {Nav, NavItem, NavDropdown, Navbar, MenuItem} from 'react-bootstrap'
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 
 import image from '../pictures/logo.png'
@@ -14,9 +14,9 @@ export default class MainMenu extends React.Component {
   render() {
     return (
       <div className="MainMenu">
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
+        <Navbar className="navbar-danger">
+          <Navbar.Header >
+            <Navbar.Brand >
               <img src={image} alt="logo"/>
             </Navbar.Brand>
             <Navbar.Toggle />
@@ -35,9 +35,17 @@ export default class MainMenu extends React.Component {
               <LinkContainer to="/categories">
                 <NavItem>Kategorie</NavItem>
               </LinkContainer>
-              <LinkContainer to="/stats">
-                <NavItem>Statystyki</NavItem>
-              </LinkContainer>
+              <NavDropdown eventKey={3} title="Statystyki" id="basic-nav-dropdown">
+                <LinkContainer to="/stats">
+                  <NavItem>Wykres</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/statsApplePieView">
+                  <NavItem>ApplePie :)</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/calendar">
+                  <NavItem>Kalendarz</NavItem>
+                </LinkContainer>
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
