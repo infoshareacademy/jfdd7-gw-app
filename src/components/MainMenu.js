@@ -14,9 +14,9 @@ export default class MainMenu extends React.Component {
   render() {
     return (
       <div className="MainMenu">
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
+        <Navbar className="navbar-danger">
+          <Navbar.Header >
+            <Navbar.Brand >
               <img src={image} alt="logo"/>
             </Navbar.Brand>
             <Navbar.Toggle />
