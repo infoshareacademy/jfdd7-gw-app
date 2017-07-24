@@ -35,12 +35,12 @@ export default connect(
 
       const buttons = [
         {
-          label: 'Incomes',
+          label: 'Przychody',
           filterName: 'value_incomes',
           style: 'success'
         },
         {
-          label: 'Outcomes',
+          label: 'Wydatki',
           filterName: 'value_outcomes',
           style: 'danger'
         },
@@ -63,7 +63,7 @@ export default connect(
               )
             )
           }
-          <Button onClick={this.props.resetFilters}>All transactions</Button>
+          <Button onClick={this.props.resetFilters}>Wszystkie wpisy</Button>
           <Table bordered striped hover responsive>
             <thead>
             <tr>
