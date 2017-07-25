@@ -4,7 +4,6 @@ import {fetchTransactions} from '../state/transactions'
 import CategoryTransactions from './CategoryTransactions'
 import {Button, Grid, Row, Col, Well} from 'react-bootstrap'
 import {activateFilter} from '../state/valuesFilters'
-
 // import {} from 'react-bootstrap'
 
 
@@ -66,6 +65,7 @@ export default connect(
                                                 button => (
                                                     <Row>
 
+
                                                         <Button block
                                                             bsStyle="warning"
                                                             key={button.filterName}
@@ -82,7 +82,7 @@ export default connect(
                                                     </Row>
                                                 )
                                             )
-                                        }
+                                        }np
                                     </div>
                                 )
                             }

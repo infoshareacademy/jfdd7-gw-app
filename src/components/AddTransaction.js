@@ -1,14 +1,13 @@
 import React from 'react'
 import AddTransactionForm from './AddTransactionForm'
-import TableData from './TableData'
+import Transactions from './Transactions'
 
 export default class AddTransaction extends React.Component {
   render() {
     return (
       <div>
         <AddTransactionForm/>
-
-        <TableData/>
+        <Transactions/>
       </div>
     )
   }
