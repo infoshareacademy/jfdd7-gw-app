@@ -9,8 +9,8 @@ const CategoryTransactions = (props) => (
             <tr>
               <th>numer</th>
               <th>data</th>
-              <th>wartość</th>
-              <th>kategoria</th>
+              <th className="text-right">wartość</th>
+              <th className="text-right">kategoria</th>
             </tr>
             </thead>
             <tbody>
@@ -24,10 +24,10 @@ const CategoryTransactions = (props) => (
                     <td>
                       { transaction.date }
                     </td>
-                    <td>
-                      { transaction.value }
+                    <td className="text-right" style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
+                      { (transaction.value).toFixed(2) }
                     </td>
-                    <td>
+                    <td className="text-right">
                       { transaction.category }
                     </td>
                   </tr>
@@ -38,11 +38,13 @@ const CategoryTransactions = (props) => (
               <td>
 
               </td>
-              <td >
+              <td className="text-right" >
                 SUMA:
               </td>
               <td>
-
+                {
+                  props.transactions.reduce((total, next) => total + next.value, 0).toFixed(2)
+                }
               </td>
               <td>
 

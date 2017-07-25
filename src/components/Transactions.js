@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Table, Button} from 'react-bootstrap'
+import {Table, Button, Grid} from 'react-bootstrap'
 
 import {fetchTransactions} from '../state/transactions'
 import {activateFilter} from '../state/valuesFilters'
@@ -35,12 +35,12 @@ export default connect(
 
       const buttons = [
         {
-          label: 'Incomes',
+          label: 'Przychody',
           filterName: 'value_incomes',
           style: 'success'
         },
         {
-          label: 'Outcomes',
+          label: 'Wydatki',
           filterName: 'value_outcomes',
           style: 'danger'
         },
@@ -48,11 +48,11 @@ export default connect(
       ]
 
       return (
-        <div>
+        <Grid>
           {
             buttons.map(
               button => (
-                <Button
+                <Button sm={4}
                   bsStyle={button.style}
                   key={button.filterName}
                   onClick={() => this.props.activateFilter(button.filterName)}
@@ -63,13 +63,15 @@ export default connect(
               )
             )
           }
-          <Button onClick={this.props.resetFilters}>All transactions</Button>
+          <Button
+              sm={4}
+              onClick={this.props.resetFilters}>Wszystkie wpisy</Button>
           <Table bordered striped hover responsive>
             <thead>
             <tr>
               <th>data</th>
-              <th>wartość</th>
-              <th>kategoria</th>
+              <th className="text-right">wartość</th>
+              <th className="text-right">kategoria</th>
             </tr>
             </thead>
             <tbody>
@@ -86,10 +88,10 @@ export default connect(
                     <td>
                       { transaction.date }
                     </td>
-                    <td style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
-                      { transaction.value }
+                    <td className="text-right" style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
+                      { (transaction.value).toFixed(2) }
                     </td>
-                    <td>
+                    <td className="text-right">
                       { transaction.category }
                     </td>
                   </tr>
@@ -98,7 +100,7 @@ export default connect(
             }
             </tbody>
           </Table>
-        </div>
+        </Grid>
       )
     }
   }

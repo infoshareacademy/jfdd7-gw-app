@@ -13,7 +13,14 @@ class RegisterUser extends React.Component {
     state = {
         email: '',
         password: '',
-        message: null
+        message: null,
+        username: ''
+    }
+
+    handleUserNameChange = event => {
+        this.setState({
+            username: event.target.value
+        })
     }
 
     handleEmailChange = event => {
@@ -39,7 +46,7 @@ class RegisterUser extends React.Component {
             user => {
                 //console.log(user)
                 user.updateProfile({
-                    displayName: 'Janusz Kowalski'
+                    displayName: this.props.username
                 }).then(
                     () => this.props.syncUser({...user})
                 )
@@ -53,6 +60,20 @@ class RegisterUser extends React.Component {
         return (
             <div className="loginDiv">
                 <form onSubmit={this.handleSubmit}>
+
+                    <FormGroup controlId="formHorizontalUsername"
+                    >
+
+
+                        <Col sm={12}>
+                            <FormControl
+                                type="text"
+                                placeholder="Nazwa użytkownika"
+                                value={this.state.username}
+                                onChange={this.handleUserNameChange}
+                            />
+                        </Col>
+                    </FormGroup>
 
                     <FormGroup controlId="formHorizontalEmail"
                     >
@@ -80,7 +101,7 @@ class RegisterUser extends React.Component {
                             <Button block
                                     bsStyle="warning"
                                     type="submit"
-                            >Stworz nowego urzytkownika
+                            >Stwórz nowego użytkownika
                             </Button>
                         </Col>
 
