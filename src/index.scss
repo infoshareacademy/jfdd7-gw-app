@@ -36,6 +36,11 @@ body {
   margin: 30px auto 10px;
 }
 
+.table-striped > tbody > tr:nth-of-type(odd){
+background-color: rgba(249, 249, 249, 0.6);
+
+}
+
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
   background-image: none;
 }
