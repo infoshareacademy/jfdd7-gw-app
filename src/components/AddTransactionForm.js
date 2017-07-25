@@ -12,22 +12,24 @@ class AddTransactionForm extends React.Component {
   state = {
     uid: this.props.uid || null,
     value: this.props.value || '',
-    title: this.props.title || ''
+    title: this.props.title || '',
+    category: this.props.category || ''
   }
 
   handleSubmit = event => {
-    const {uid, value, title} = this.state
+    const {uid, value, title, category} = this.state
 
     event.preventDefault()
 
     if (uid === null) {
-      this.props.createTransaction({value, title})
+      this.props.createTransaction({value, title, category})
       this.setState({
         value: '',
-        title: ''
+        title: '',
+        category: ''
       })
     } else {
-      this.props.updateTransaction(uid, {value, title})
+      this.props.updateTransaction(uid, {value, title, category})
     }
   }
 
@@ -56,15 +58,18 @@ class AddTransactionForm extends React.Component {
                 })}
               />
             </FormGroup>
+
             <FormGroup controlId="formControlsSelectMultiple">
               <ControlLabel>Kategoria</ControlLabel>
-              <FormControl componentClass="select" multiple>
-                <option value="select">select (multiple)</option>
-                <option value="other">dom</option>
-                <option value="other">pies</option>
-                <option value="other">alko</option>
-                <option value="other">waha</option>
-              </FormControl>
+              <FormControl
+              type="text"
+              placeholder="Kategoria"
+              value={this.state.category}
+              onChange={event => this.setState({
+                category: event.target.value
+              })}
+              />
+
             </FormGroup>
             <Button type="submit" className='left col-xs-12 col-md-5' bsStyle="success">Dodaj wpis</Button>
           </form>
