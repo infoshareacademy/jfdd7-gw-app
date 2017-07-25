@@ -36,6 +36,13 @@ body {
   margin: 30px auto 10px;
 }
 
-
-
+.graf{
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .graf {
+    opacity: 0;
+    height: 0;
+  }
+}
 

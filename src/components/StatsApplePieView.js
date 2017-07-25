@@ -64,8 +64,8 @@ export default connect(
               {
                 totals.map((element, i) => (
                   <div key={i} style={{fontSize: 15, margin: 0, padding: 0}}>
-                    <span style={{color: element.color, margin: 0, padding: 0, marginRight: 10, fontSize:50, position: 'relative', top: 10}}>&bull;</span>
-                    <span style={{fontWeight: this.state.expandedSector === i ? "bold" : null, lineHeight: 1}}>
+                    <span style={{color: element.color, margin: 0, padding: 0, marginRight: 10, fontSize:50, position: 'relative', top: 23}}>&bull;</span>
+                    <span style={{display: 'block', marginLeft: 25, fontWeight: this.state.expandedSector === i ? "bold" : null, lineHeight: 1}}>
                       <b>{element.label + ': '}</b> {element.value}
                     </span>
                   </div>

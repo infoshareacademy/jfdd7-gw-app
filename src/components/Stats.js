@@ -37,7 +37,7 @@ export default connect(
       )
       return (
         <Grid>
-          <div className="hidden-xs">
+          <div className='graf'>
             <h2 style={{textAlign: 'center'}}>Bilans wydatków i wpływów</h2>
 
             <ResponsiveContainer height={300}>
