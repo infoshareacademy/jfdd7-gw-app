@@ -11,25 +11,27 @@ class AddTransactionForm extends React.Component {
 
   state = {
     uid: this.props.uid || null,
+    date: this.props.date || '',
     value: this.props.value || '',
     title: this.props.title || '',
     category: this.props.category || ''
   }
 
   handleSubmit = event => {
-    const {uid, value, title, category} = this.state
+    const {uid, date, value, title, category} = this.state
 
     event.preventDefault()
 
     if (uid === null) {
-      this.props.createTransaction({value, title, category})
+      this.props.createTransaction({date, value, title, category})
       this.setState({
+        date: '',
         value: '',
         title: '',
         category: ''
       })
     } else {
-      this.props.updateTransaction(uid, {value, title, category})
+      this.props.updateTransaction(uid, {date, value, title, category})
     }
   }
 
@@ -40,13 +42,23 @@ class AddTransactionForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <FormGroup bsSize="large">
               <FormControl
+                type="date"
+                placeholder="Data"
+                value={this.state.date}
+                onChange={event => this.setState({
+                  date: event.target.value
+                })}
+              />
+            </FormGroup>
+            <FormGroup bsSize="large">
+              <FormControl
                 type="text"
                 placeholder="Kwota"
                 value={this.state.value}
                 onChange={event => this.setState({
                   value: event.target.value
                 })}
-              />
+              ></FormControl>
             </FormGroup>
             <FormGroup bsSize="large">
               <FormControl

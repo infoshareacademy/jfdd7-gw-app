@@ -7,7 +7,7 @@ import {activateFilter} from '../state/valuesFilters'
 
 export default connect(
   state => ({
-    transactions: state.transactions,
+    transactions: state.posts,
     activeFilterNames: state.valuesFilters.activeFilterNames
   }),
 
@@ -89,7 +89,7 @@ export default connect(
                       { transaction.date }
                     </td>
                     <td className="text-right" style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
-                      { (transaction.value).toFixed(2) }
+                      { (transaction.value) }
                     </td>
                     <td className="text-right">
                       { transaction.category }
