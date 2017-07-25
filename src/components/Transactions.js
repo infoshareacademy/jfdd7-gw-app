@@ -49,23 +49,42 @@ export default connect(
 
       return (
         <Grid>
+          <ul className="nav nav-tabs">
           {
             buttons.map(
               button => (
-                <Button sm={4}
-                  bsStyle={button.style}
+                <li
                   key={button.filterName}
-                  onClick={() => this.props.activateFilter(button.filterName)}
-                  active={this.props.activeFilterNames.includes(button.filterName)}
+                  className={this.props.activeFilterNames.includes(button.filterName) ? 'active' : null}
                 >
-                  {button.label}
-                </Button>
+                  <a
+                    onClick={event => {
+                      event.preventDefault()
+                      this.props.activateFilter(button.filterName)
+                    }}
+                  >
+                    <span className={button.filterName === 'value_outcomes'? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus' }></span> {button.label}
+                    </a>
+                </li>
               )
             )
           }
-          <Button
-              sm={4}
-              onClick={this.props.resetFilters}>Wszystkie wpisy</Button>
+              <li
+              className={this.props.resetFilters}
+              >
+                  <a
+              onClick={event => {
+                event.preventDefault()
+                this.props.resetFilters()
+
+              }}
+
+                    >
+                    <span className="glyphicon glyphicon-piggy-bank"></span>    Wszystkie wpisy
+                  </a>
+
+              </li>
+          </ul>
           <Table bordered striped hover responsive>
             <thead>
             <tr>
