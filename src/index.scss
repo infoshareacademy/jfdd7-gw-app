@@ -36,6 +36,10 @@ body {
   margin: 30px auto 10px;
 }
 
+.container-fluid h2{
+  font-family: 'Kaushan Script', cursive;
+}
+
 .table-striped > tbody > tr:nth-of-type(odd){
 background-color: rgba(249, 249, 249, 0.6);
 

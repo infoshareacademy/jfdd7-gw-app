@@ -44,8 +44,13 @@ export default class FirstPage extends React.Component {
               </Col>
 
             </Row>
+            <div class="container-fluid">
+              <h1>Aplikacja budżetowa GW1</h1>
+
+            </div>
           </Grid>
         </div>
     )
   }
 }
+
