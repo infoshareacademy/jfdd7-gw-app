@@ -81,7 +81,7 @@ export default connect(
                                                     </Row>
                                                 )
                                             )
-                                        }np
+                                        }
                                     </div>
                                 )
                             }
