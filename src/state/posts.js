@@ -25,7 +25,8 @@ export const createTransaction = data => dispatch => {
   const userId = firebase.auth().currentUser.uid
   const ref = firebase.database().ref('transactions/' + userId).push()
   ref.set({
-    content: data.content,
+    value: data.value,
+    title: data.title,
     author: firebase.auth().currentUser.displayName
   })
 }
@@ -34,7 +35,8 @@ export const updateTransaction = (uid, data) => dispatch => {
   const userId = firebase.auth().currentUser.uid
   const ref = firebase.database().ref('transactions/' + userId + '/' + uid)
   ref.update({
-    content: data.content
+    value: data.value,
+    title: data.title
   })
 }
 
