@@ -65,6 +65,7 @@ export default connect(
                                                 button => (
                                                     <Row>
 
+
                                                         <Button block
                                                             bsStyle="warning"
                                                             key={button.filterName}
