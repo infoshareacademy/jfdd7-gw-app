@@ -63,7 +63,7 @@ export default connect(
                       this.props.activateFilter(button.filterName)
                     }}
                   >
-                    {button.label}
+                    <span className={button.filterName === 'value_outcomes'? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus' }></span> {button.label}
                     </a>
                 </li>
               )
@@ -80,7 +80,7 @@ export default connect(
               }}
 
                     >
-                    Wszystkie wpisy
+                    <span className="glyphicon glyphicon-piggy-bank"></span>    Wszystkie wpisy
                   </a>
 
               </li>
