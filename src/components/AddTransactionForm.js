@@ -1,6 +1,7 @@
 import React from 'react'
 import {FormControl, FormGroup, ControlLabel, Button, Grid} from 'react-bootstrap'
 import {connect} from 'react-redux'
+import moment from 'moment'
 
 import {updateTransaction, createTransaction} from '../state/posts'
 
@@ -11,8 +12,8 @@ class AddTransactionForm extends React.Component {
 
   state = {
     uid: this.props.uid || null,
-    date: this.props.date || '',
-    value: this.props.value || '',
+    date: this.props.date || moment().format('YYYY-MM-D'),
+    value: this.props.value || '-',
     title: this.props.title || '',
     category: this.props.category || ''
   }
@@ -58,7 +59,7 @@ class AddTransactionForm extends React.Component {
                 onChange={event => this.setState({
                   value: event.target.value
                 })}
-              ></FormControl>
+              />
             </FormGroup>
             <FormGroup bsSize="large">
               <FormControl
