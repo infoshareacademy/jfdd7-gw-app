@@ -35,12 +35,12 @@ export default connect(
 
       const buttons = [
         {
-          label: 'Incomes',
+          label: 'Przychody',
           filterName: 'value_incomes',
           style: 'success'
         },
         {
-          label: 'Outcomes',
+          label: 'Wydatki',
           filterName: 'value_outcomes',
           style: 'danger'
         },
@@ -52,7 +52,7 @@ export default connect(
           {
             buttons.map(
               button => (
-                <Button
+                <Button sm={4}
                   bsStyle={button.style}
                   key={button.filterName}
                   onClick={() => this.props.activateFilter(button.filterName)}
@@ -63,7 +63,9 @@ export default connect(
               )
             )
           }
-          <Button onClick={this.props.resetFilters}>All transactions</Button>
+          <Button
+              sm={4}
+              onClick={this.props.resetFilters}>Wszystkie wpisy</Button>
           <Table bordered striped hover responsive>
             <thead>
             <tr>
