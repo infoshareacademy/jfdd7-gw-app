@@ -7,7 +7,7 @@ import StatsApplePieView from './StatsApplePieView'
 
 export default connect(
   state => ({
-    transactions: state.transactions.data
+    transactions: state.posts.data
   })
 )(
   class Stats extends React.Component {

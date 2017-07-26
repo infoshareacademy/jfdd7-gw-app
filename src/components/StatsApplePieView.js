@@ -27,7 +27,7 @@ export default connect(
 
 
     render() {
-      const transactions = this.props.transactions === null ? [] : this.props.transactions
+        const transactions = this.props.transactions === null ? [] : this.props.transactions
       const sumValuesOfOneCategory = category =>
         transactions.filter(
           transaction => transaction.category === category

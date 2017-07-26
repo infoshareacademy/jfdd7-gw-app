@@ -38,7 +38,6 @@ const App = () => (
       <Route exact path="/stats" component={Stats}/>
       <Route path="/login" component={LoginPage}/>
       <Route path="/statsApplePieView" component={StatsApplePieView}/>
-      <Route path="/calendar" component={Calendar}/>
 
     </div>
   </Router>
