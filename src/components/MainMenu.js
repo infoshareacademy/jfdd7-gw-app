@@ -50,12 +50,12 @@ export default class MainMenu extends React.Component {
                   <NavItem>Kalendarz</NavItem>
                 </LinkContainer>
               </NavDropdown>
-              <Nav pullRight>
-                <Button navbar
-                  onClick={() => firebase.auth().signOut()}>
-                  Wyloguj
-                </Button>
-              </Nav>
+            </Nav>
+            <Nav pullRight>
+              <Button navbar
+                      onClick={() => firebase.auth().signOut()}>
+                Wyloguj
+              </Button>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
