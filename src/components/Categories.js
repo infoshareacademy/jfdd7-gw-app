@@ -9,12 +9,13 @@ import {activateFilter} from '../state/valuesFilters'
 
 export default connect(
     state => ({
-        transactions: state.transactions,
+        transactions: state.posts,
         activeFilterNames: state.valuesFilters.activeFilterNames
     }),
     dispatch => ({
         fetchTransactions: () => dispatch(fetchTransactions()),
         activateFilter: (name) => dispatch(activateFilter(name)),
+        resetFilters: () => dispatch({ type: 'RESET' })
     })
 )(
     class Categories extends React.Component {
@@ -24,7 +25,7 @@ export default connect(
         }
 
         render() {
-            const {data, fetching, error} = this.props.transactions
+            const {data} = this.props.transactions
 
             return (
               <Grid className="Categories">
@@ -32,15 +33,6 @@ export default connect(
                   <Row>
                     <h1 className="text-center">KATEGORIE</h1>
                   </Row>
-                  {/*<Row className="show-grid">*/}
-                    {/*<Col xs={6} md={2}></Col>*/}
-                    {/*<Col xs={12} md={8}>KATEGORIE</Col>*/}
-                    {/*<Col xs={6} md={2}></Col>*/}
-                  {/*</Row>*/}
-
-                    { error === null ? null : <p>{error.message}</p> }
-                    { fetching === false ? null : <p>Fetching data...</p>}
-
 
                     {
                         //this.props.students.data !== null && this.props.students.data.map(
@@ -62,27 +54,29 @@ export default connect(
                                     <div key={category}>
                                         {
                                             buttons.map(
-                                                button => (
+                                                button => {
+                                                  console.log(dataToDisplay)
+                                                  return (
                                                     <Row>
 
+                                                      <Button block
+                                                              bsStyle="warning"
+                                                              key={button.filterName}
+                                                              onClick={() => this.props.activateFilter(button.filterName)}
+                                                              active={this.props.activeFilterNames.includes(button.filterName)}
+                                                      >
+                                                        {(button.label).toUpperCase() }
+                                                      </Button>
 
-                                                        <Button block
-                                                            bsStyle="warning"
-                                                            key={button.filterName}
-                                                            onClick={() => this.props.activateFilter(button.filterName)}
-                                                            active={this.props.activeFilterNames.includes(button.filterName)}
-                                                        >
-                                                            {(button.label).toUpperCase() }
-                                                        </Button>
 
-
-                                                        {this.props.activeFilterNames.includes(button.filterName)?
+                                                      {this.props.activeFilterNames.includes(button.filterName)?
                                                         <CategoryTransactions transactions={dataToDisplay} /> : null}
 
                                                     </Row>
-                                                )
+                                                  )
+                                                }
                                             )
-                                        }np
+                                        }
                                     </div>
                                 )
                             }

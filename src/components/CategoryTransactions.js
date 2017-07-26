@@ -25,7 +25,7 @@ const CategoryTransactions = (props) => (
                       { transaction.date }
                     </td>
                     <td className="text-right" style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
-                      { (transaction.value).toFixed(2) }
+                      { (transaction.value) }
                     </td>
                     <td className="text-right">
                       { transaction.category }
