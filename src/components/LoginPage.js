@@ -24,11 +24,13 @@ export default  class LoginPage extends React.Component {
         }
 
         const showL = () => {
-            this.setState({ showLogin: !this.state.showLogin })
+            this.setState({ showLogin: !this.state.showLogin,
+                            showRegister: this.state.showRegister ? false : null})
         }
 
         const showR = () => {
-            this.setState({ showRegister: !this.state.showRegister })
+            this.setState({ showRegister: !this.state.showRegister,
+                            showLogin: this.state.showLogin ? false : null  })
         }
 
         return (
