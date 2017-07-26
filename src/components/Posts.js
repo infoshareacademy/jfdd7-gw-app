@@ -16,6 +16,7 @@ const Transactions = ({ transactions, favedTransactionIds, handleDeleteTransacti
           transactions.data.slice().reverse().map(
             transaction => (
               <div key={transaction.uid}>
+                <p>{transaction.title}: {transaction.value} {transaction.category}</p>
                 <p>
                   <strong>{transaction.author}:</strong> {transaction.content}
                 </p>
