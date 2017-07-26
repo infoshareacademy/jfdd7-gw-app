@@ -42,6 +42,7 @@ class AddTransactionForm extends React.Component {
         <div>
           <form onSubmit={this.handleSubmit}>
             <FormGroup bsSize="large">
+              <ControlLabel>Data</ControlLabel>
               <FormControl
                 type="date"
                 placeholder="Data"
@@ -52,7 +53,8 @@ class AddTransactionForm extends React.Component {
               />
             </FormGroup>
             <FormGroup bsSize="large">
-              <FormControl
+              <ControlLabel>Kwota</ControlLabel>
+              <FormControl required
                 type="text"
                 placeholder="Kwota"
                 value={this.state.value}
@@ -62,7 +64,8 @@ class AddTransactionForm extends React.Component {
               />
             </FormGroup>
             <FormGroup bsSize="large">
-              <FormControl
+              <ControlLabel>Tytuł</ControlLabel>
+              <FormControl required
                 type="text"
                 placeholder="Tytuł"
                 value={this.state.title}
@@ -74,7 +77,7 @@ class AddTransactionForm extends React.Component {
 
             <FormGroup controlId="formControlsSelectMultiple">
               <ControlLabel>Kategoria</ControlLabel>
-              <FormControl
+              <FormControl required
               type="text"
               placeholder="Kategoria"
               value={this.state.category}
@@ -84,7 +87,7 @@ class AddTransactionForm extends React.Component {
               />
 
             </FormGroup>
-            <Button type="submit" className='left col-xs-12 col-md-5' bsStyle="success">Dodaj wpis</Button>
+            <Button type="submit" className='center-block col-xs-12 col-md-5' bsStyle="success">Dodaj wpis</Button>
           </form>
 
 
