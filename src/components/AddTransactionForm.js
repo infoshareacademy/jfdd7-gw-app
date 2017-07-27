@@ -37,6 +37,19 @@ class AddTransactionForm extends React.Component {
   }
 
   render() {
+
+    const transactions = this.props.transactions === null ? [] : this.props.transactions
+
+    const categories = transactions.map(
+      transaction => transaction.category
+    ).filter(
+      (item, index, allItems) => allItems.indexOf(item) === index
+    ).filter(
+      category => (
+        category.toLowerCase().includes(this.state.category) ? this.state.category.toLowerCase() : null
+      )
+    )
+
     return (
       <Grid>
         <div>
@@ -75,16 +88,17 @@ class AddTransactionForm extends React.Component {
             <FormGroup controlId="formControlsSelectMultiple">
               <ControlLabel>Kategoria</ControlLabel>
               <FormControl
-              type="text"
-              placeholder="Kategoria"
-              value={this.state.category}
-              onChange={event => this.setState({
-                category: event.target.value
-              })}
+                autoComplete="off"
+                type="text"
+                placeholder="Kategoria"
+                value={this.state.category}
+                onChange={event => this.setState({
+                  category: event.target.value
+                })}
               />
-
             </FormGroup>
-            <Button type="submit" className='left col-xs-12 col-md-5' bsStyle="success">Dodaj wpis</Button>
+            {categories.map(category => <li style={{listStyleType: 'none'}}>{category}</li>)}
+            <Button type="submit" className='left col-xs-12' bsStyle="success">Dodaj wpis</Button>
           </form>
 
 
@@ -95,9 +109,12 @@ class AddTransactionForm extends React.Component {
 }
 
 export default connect(
-  null,
+  state => ({
+    transactions: state.posts.data
+  }),
   dispatch => ({
     createTransaction: data => dispatch(createTransaction(data)),
     updateTransaction: (uid, data) => dispatch(updateTransaction(uid, data))
   })
 )(AddTransactionForm)
+
