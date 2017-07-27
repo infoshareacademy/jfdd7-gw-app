@@ -22,6 +22,10 @@ export default connect(
 )(
   class Transactions extends React.Component {
 
+    state = {
+      summaryEnabled: false
+    }
+
     componentWillMount() {
       this.props.fetchTransactions()
     }
@@ -54,97 +58,106 @@ export default connect(
 
       return (
         <Grid>
-          <ul className="nav nav-tabs">
-          {
-            buttons.map(
-              button => (
-                <li
-                  key={button.filterName}
-                  className={this.props.activeFilterNames.includes(button.filterName) ? 'active' : null}
-                >
-                  <a
-                    onClick={event => {
-                      event.preventDefault()
-                      this.props.activateFilter(button.filterName)
-                    }}
-                  >
-                    <span className={button.filterName === 'value_outcomes'? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus' }></span> {button.label}
-                    </a>
-                </li>
-              )
-            )
-          }
-              <li
-              className={this.props.resetFilters}
-              >
-                  <a
+          <Button
+            className={this.props.resetFilters}
+
+
               onClick={event => {
                 event.preventDefault()
-                this.props.resetFilters()
+                this.setState({
+                  summaryEnabled: !this.state.summaryEnabled
+                })
 
               }}
 
-                    >
-                    <span className="glyphicon glyphicon-piggy-bank"></span>    Wszystkie wpisy
-                  </a>
-
-              </li>
-            <li
-              className={this.props.resetFilters}
             >
-              <a
-                onClick={event => {
-                  event.preventDefault()
-                  this.props.resetFilters()
+                Nuke button
 
-                }}
+          </Button>
 
-              >
-                <span className="glyphicon glyphicon-piggy-bank"></span>    Wszystkie wpisy
-              </a>
+          {
+            this.state.summaryEnabled === true ?
+              <p>Bilansik</p> :
+              <div>
+                <ul className="nav nav-tabs">
+                  {
+                    buttons.map(
+                      button => (
+                        <li
+                          key={button.filterName}
+                          className={this.props.activeFilterNames.includes(button.filterName) ? 'active' : null}
+                        >
+                          <a
+                            onClick={event => {
+                              event.preventDefault()
+                              this.props.activateFilter(button.filterName)
+                            }}
+                          >
+                            <span className={button.filterName === 'value_outcomes'? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus' }></span> {button.label}
+                          </a>
+                        </li>
+                      )
+                    )
+                  }
+                  <li
+                    className={this.props.resetFilters}
+                  >
+                    <a
+                      onClick={event => {
+                        event.preventDefault()
+                        this.props.resetFilters()
 
-            </li>
-          </ul>
-          <Table bordered striped hover responsive>
-            <thead>
-            <tr>
-              <th>data</th>
-              <th className="text-right">wartość</th>
-              <th className="text-right">kategoria</th>
-              <th>Usuń</th>
-            </tr>
-            </thead>
-            <tbody>
-            {
-              data !== null && data.filter(
-                transaction => this.props.activeFilterNames.map(
-                  filterName => filters[filterName] || (() => true)
-                ).every(
-                  f => f(transaction) === true
-                )
-              ).sort((a, b) => (new Date(b.date)) - (new Date(a.date))).slice(0, this.props.limit).map(
-                transaction => (
-                  <tr key={transaction.id}>
-                    <td>
-                      { transaction.date }
-                    </td>
-                    <td className="text-right" style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
-                      { (transaction.value) }
-                    </td>
-                    <td className="text-right">
-                      { transaction.category }
-                    </td>
-                    <td>
-                      <button data-uid={transaction.uid} onClick={this.props.handleDeleteTransactionClick}>
-                        Usuń
-                      </button>
-                    </td>
-                  </tr>
-                )
-              )
-            }
-            </tbody>
-          </Table>
+                      }}
+
+                    >
+                      <span className="glyphicon glyphicon-piggy-bank"></span>    Wszystkie wpisy
+                    </a>
+
+                  </li>
+
+                </ul>
+              <Table bordered striped hover responsive>
+                <thead>
+                <tr>
+                  <th>data</th>
+                  <th className="text-right">wartość</th>
+                  <th className="text-right">kategoria</th>
+                  <th>Usuń</th>
+                </tr>
+                </thead>
+                <tbody>
+                {
+                  data !== null && data.filter(
+                    transaction => this.props.activeFilterNames.map(
+                      filterName => filters[filterName] || (() => true)
+                    ).every(
+                      f => f(transaction) === true
+                    )
+                  ).sort((a, b) => (new Date(b.date)) - (new Date(a.date))).slice(0, this.props.limit).map(
+                    transaction => (
+                      <tr key={transaction.id}>
+                        <td>
+                          { transaction.date }
+                        </td>
+                        <td className="text-right" style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
+                          { (transaction.value) }
+                        </td>
+                        <td className="text-right">
+                          { transaction.category }
+                        </td>
+                        <td>
+                          <button data-uid={transaction.uid} onClick={this.props.handleDeleteTransactionClick}>
+                            Usuń
+                          </button>
+                        </td>
+                      </tr>
+                    )
+                  )
+                }
+                </tbody>
+              </Table>
+              </div>
+          }
 
         </Grid>
 
