@@ -65,7 +65,7 @@ export default connect(
                                                               onClick={() => this.props.activateFilter(button.filterName)}
                                                               active={this.props.activeFilterNames.includes(button.filterName)}
                                                       >
-                                                        {(button.label).toUpperCase() }
+                                                        {(button.label || '--anonymous--').toUpperCase() }
                                                       </Button>
 
 

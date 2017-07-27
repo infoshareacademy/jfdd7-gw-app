@@ -83,5 +83,12 @@ body {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ecdbff;
     background-color: #9a4e3e; } }
+.graf {
+  opacity: 1; }
+
+@media (max-width: 768px) {
+  .graf {
+    opacity: 0;
+    height: 0; } }
 
 /*# sourceMappingURL=index.css.map */
