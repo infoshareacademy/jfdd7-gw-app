@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Table, Button, Grid} from 'react-bootstrap'
 
+
 import {fetchTransactions} from '../state/transactions'
 import {activateFilter} from '../state/valuesFilters'
 
@@ -26,6 +27,8 @@ export default connect(
 
     render() {
       const {data} = this.props.transactions
+
+
 
       const filters = {
        value_incomes: transaction => transaction.value > 0,
@@ -84,6 +87,21 @@ export default connect(
                   </a>
 
               </li>
+            <li
+              className={this.props.resetFilters}
+            >
+              <a
+                onClick={event => {
+                  event.preventDefault()
+                  this.props.resetFilters()
+
+                }}
+
+              >
+                <span className="glyphicon glyphicon-piggy-bank"></span>    Wszystkie wpisy
+              </a>
+
+            </li>
           </ul>
           <Table bordered striped hover responsive>
             <thead>
@@ -101,7 +119,7 @@ export default connect(
                 ).every(
                   f => f(transaction) === true
                 )
-              ).sort((a, b) => (new Date(b.date)) - (new Date(a.date))).map(
+              ).sort((a, b) => (new Date(b.date)) - (new Date(a.date))).slice(0, this.props.limit).map(
                 transaction => (
                   <tr key={transaction.id}>
                     <td>
@@ -119,7 +137,9 @@ export default connect(
             }
             </tbody>
           </Table>
+
         </Grid>
+
       )
     }
   }
