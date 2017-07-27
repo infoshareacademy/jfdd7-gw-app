@@ -5,7 +5,6 @@ import React from 'react';
 import firebase from 'firebase'
 import {syncUser} from '../state/auth'
 import {connect} from 'react-redux'
-import RegisterUser from './RegisterUser'
 
 import {FormGroup, Col, FormControl, Button} from 'react-bootstrap'
 
