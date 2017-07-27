@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import { deleteTransaction } from '../state/posts'
 import {Table, Button, Grid} from 'react-bootstrap'
 
 
@@ -13,6 +14,7 @@ export default connect(
   }),
 
   dispatch => ({
+    handleDeleteTransactionClick: event => dispatch(deleteTransaction(event.target.dataset.uid)),
     fetchTransactions: () => dispatch(fetchTransactions()),
     activateFilter: (name) => dispatch(activateFilter(name)),
     resetFilters: () => dispatch({ type: 'RESET' })
@@ -120,6 +122,7 @@ export default connect(
                   <th>data</th>
                   <th className="text-right">wartość</th>
                   <th className="text-right">kategoria</th>
+                  <th>Usuń</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -141,6 +144,11 @@ export default connect(
                         </td>
                         <td className="text-right">
                           { transaction.category }
+                        </td>
+                        <td>
+                          <button data-uid={transaction.uid} onClick={this.props.handleDeleteTransactionClick}>
+                            Usuń
+                          </button>
                         </td>
                       </tr>
                     )
