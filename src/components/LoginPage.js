@@ -4,7 +4,10 @@
 import React from 'react';
 import LoginForm from './LoginForm';
 import RegisterUser from './RegisterUser'
-import {Button, Modal} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
+
+
+import CSSTransitionGroup from 'react-addons-css-transition-group'
 
 export default  class LoginPage extends React.Component {
 
@@ -55,7 +58,9 @@ export default  class LoginPage extends React.Component {
 
 
                     <div style={showLogin}>
-                        {<LoginForm />}
+                        <CSSTransitionGroup transitionName="example">
+                        <LoginForm />
+                        </CSSTransitionGroup>
                     </div>
 
 
