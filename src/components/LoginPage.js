@@ -7,7 +7,7 @@ import RegisterUser from './RegisterUser'
 import {Button} from 'react-bootstrap'
 
 
-import CSSTransitionGroup from 'react-addons-css-transition-group'
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
 
 export default  class LoginPage extends React.Component {
 
@@ -59,13 +59,20 @@ export default  class LoginPage extends React.Component {
 
                     <div style={showLogin}>
                         <CSSTransitionGroup transitionName="example">
-                        <LoginForm />
+                            {this.state.showLogin ? <LoginForm /> : null
+                            }
+
                         </CSSTransitionGroup>
                     </div>
 
 
                     <div style={showRegister}>
-                        <RegisterUser/>
+                        <CSSTransitionGroup transitionName="example">
+                            {this.state.showRegister ? <RegisterUser/> : null
+                            }
+
+                        </CSSTransitionGroup>
+
                     </div>
                 </div>
             </div>

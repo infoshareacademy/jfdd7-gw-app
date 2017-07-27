@@ -29,6 +29,18 @@ body {
   border-radius: 50%;
   margin: 30px auto 10px; }
 
+
+.example-enter {
+    opacity: 0;
+}
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity .9s ease;
+}.example-leave.example-leave-active {
+     opacity: 0;
+     transition: opacity .9s ease;
+ }
+
 .container-fluid h2 {
   font-family: 'Kaushan Script', cursive; }
 
