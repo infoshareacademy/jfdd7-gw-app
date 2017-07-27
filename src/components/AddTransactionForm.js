@@ -49,12 +49,12 @@ class AddTransactionForm extends React.Component {
         category.toLowerCase().includes(this.state.category) ? this.state.category.toLowerCase() : null
       )
     )
-
     return (
       <Grid>
         <div>
           <form onSubmit={this.handleSubmit}>
             <FormGroup bsSize="large">
+              <ControlLabel>Data</ControlLabel>
               <FormControl
                 type="date"
                 placeholder="Data"
@@ -65,7 +65,8 @@ class AddTransactionForm extends React.Component {
               />
             </FormGroup>
             <FormGroup bsSize="large">
-              <FormControl
+              <ControlLabel>Kwota</ControlLabel>
+              <FormControl required
                 type="text"
                 placeholder="Kwota"
                 value={this.state.value}
@@ -75,7 +76,8 @@ class AddTransactionForm extends React.Component {
               />
             </FormGroup>
             <FormGroup bsSize="large">
-              <FormControl
+              <ControlLabel>Tytuł</ControlLabel>
+              <FormControl required
                 type="text"
                 placeholder="Tytuł"
                 value={this.state.title}
@@ -87,18 +89,19 @@ class AddTransactionForm extends React.Component {
 
             <FormGroup controlId="formControlsSelectMultiple">
               <ControlLabel>Kategoria</ControlLabel>
-              <FormControl
-                autoComplete="off"
-                type="text"
-                placeholder="Kategoria"
-                value={this.state.category}
-                onChange={event => this.setState({
-                  category: event.target.value
-                })}
+              <FormControl required
+                           autoComplete="off"
+              type="text"
+              placeholder="Kategoria"
+              value={this.state.category}
+              onChange={event => this.setState({
+                category: event.target.value
+              })}
               />
+
             </FormGroup>
             {categories.map(category => <li style={{listStyleType: 'none'}}>{category}</li>)}
-            <Button type="submit" className='left col-xs-12' bsStyle="success">Dodaj wpis</Button>
+            <Button type="submit" className='left col-xs-12 col-md-5' bsStyle="success">Dodaj wpis</Button>
           </form>
 
 
@@ -117,4 +120,3 @@ export default connect(
     updateTransaction: (uid, data) => dispatch(updateTransaction(uid, data))
   })
 )(AddTransactionForm)
-

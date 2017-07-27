@@ -21,6 +21,7 @@ import LoginPage from './LoginPage'
 import AddTansaction1 from './AddTransaction1'
 import '../App.css'
 
+
 const App = () => (
   <Router>
     <div>
@@ -38,6 +39,7 @@ const App = () => (
       <Route exact path="/stats" component={Stats}/>
       <Route path="/login" component={LoginPage}/>
       <Route path="/statsApplePieView" component={StatsApplePieView}/>
+
 
     </div>
   </Router>

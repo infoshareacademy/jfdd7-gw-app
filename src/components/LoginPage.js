@@ -55,7 +55,7 @@ export default  class LoginPage extends React.Component {
 
 
                     <div style={showLogin}>
-                        {<LoginForm />}
+                        <LoginForm />
                     </div>
 
 
