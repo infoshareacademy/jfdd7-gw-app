@@ -7,10 +7,9 @@ const CategoryTransactions = (props) => (
           <Table bordered striped hover responsive>
             <thead>
             <tr>
-              <th>numer</th>
               <th>data</th>
               <th className="text-right">wartość</th>
-              <th className="text-right">kategoria</th>
+              <th className="text-right">tytuł</th>
             </tr>
             </thead>
             <tbody>
@@ -19,25 +18,20 @@ const CategoryTransactions = (props) => (
                 transaction => (
                   <tr key={transaction.id}>
                     <td>
-                      { transaction.id }
-                    </td>
-                    <td>
                       { transaction.date }
                     </td>
                     <td className="text-right" style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
                       { (transaction.value) }
                     </td>
                     <td className="text-right">
-                      { transaction.category }
+                      { transaction.title }
                     </td>
+
                   </tr>
                 )
               )
             }
             <tr >
-              <td>
-
-              </td>
               <td className="text-right" >
                 SUMA:
               </td>
