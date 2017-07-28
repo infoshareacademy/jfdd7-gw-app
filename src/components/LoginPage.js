@@ -5,13 +5,13 @@ import React from 'react';
 import LoginForm from './LoginForm';
 import RegisterUser from './RegisterUser'
 import {Button} from 'react-bootstrap'
-import CSSTransitionGroup from 'react-addons-css-transition-group'
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
 
 export default  class LoginPage extends React.Component {
 
     state = {
         showLogin: false,
-        showRegister: false
+        // showRegister: false
 
     }
 
@@ -44,8 +44,14 @@ export default  class LoginPage extends React.Component {
                         block
                         bsStyle="warning"
                         className="horizontal"
-                        onClick={showL}
-                    >Panel logowania</Button>
+                        onClick={event => {
+                            event.preventDefault()
+                            this.setState({
+                                showLogin: !this.state.showLogin
+                            })
+                        }}
+
+                            >Panel nuke</Button>
 
                     <Button
                         block
@@ -56,16 +62,25 @@ export default  class LoginPage extends React.Component {
                 </div>
 
 
-                    <div style={showLogin}>
+                    {/*<div style={showLogin}>*/}
                         <CSSTransitionGroup transitionName="example">
-                        <LoginForm />
+                            {this.state.showLogin ? <LoginForm /> : <RegisterUser/>
+                            }
+
+
                         </CSSTransitionGroup>
-                    </div>
+                    {/*</div>*/}
 
 
-                    <div style={showRegister}>
-                        <RegisterUser/>
-                    </div>
+
+                    {/*<div style={showRegister}>*/}
+                        {/*<CSSTransitionGroup transitionName="example">*/}
+                            {/*{this.state.showRegister ? <RegisterUser/> : null*/}
+                            {/*}*/}
+
+                        {/*</CSSTransitionGroup>*/}
+
+                    {/*</div>*/}
                 </div>
             </div>
         );
