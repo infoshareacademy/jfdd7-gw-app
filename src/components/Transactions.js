@@ -4,6 +4,7 @@ import { deleteTransaction } from '../state/posts'
 import {Table, Button, Grid} from 'react-bootstrap'
 
 
+
 import {fetchTransactions} from '../state/transactions'
 import {activateFilter} from '../state/valuesFilters'
 
