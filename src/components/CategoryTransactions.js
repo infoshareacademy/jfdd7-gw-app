@@ -37,7 +37,7 @@ const CategoryTransactions = (props) => (
               </td>
               <td>
                 {
-                  props.transactions.reduce((total, next) => total + next.value, 0).toFixed(2)
+                  props.transactions.reduce((total, next) => total + (next.value || 0), 0).toFixed(2)
                 }
               </td>
               <td>

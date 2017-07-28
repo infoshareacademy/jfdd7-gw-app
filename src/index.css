@@ -29,6 +29,17 @@ body {
   border-radius: 50%;
   margin: 30px auto 10px; }
 
+.example-enter {
+  opacity: 0; }
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity .6s ease; }
+
+.example-leave.example-leave-active {
+  opacity: 0;
+  transition: opacity .6s ease; }
+
 .container-fluid h2 {
   font-family: 'Kaushan Script', cursive; }
 
@@ -83,5 +94,12 @@ body {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ecdbff;
     background-color: #9a4e3e; } }
+.graf {
+  opacity: 1; }
+
+@media (max-width: 768px) {
+  .graf {
+    opacity: 0;
+    height: 0; } }
 
 /*# sourceMappingURL=index.css.map */

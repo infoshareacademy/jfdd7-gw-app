@@ -36,6 +36,20 @@ body {
   margin: 30px auto 10px;
 }
 
+.example-enter {
+  opacity: 0;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity .6s ease;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+
 .container-fluid h2{
   font-family: 'Kaushan Script', cursive;
 }
@@ -125,6 +139,14 @@ $dropDown       : false;
         background-color: $bgHighlight; }}}
 }
 
-
+.graf{
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .graf {
+    opacity: 0;
+    height: 0;
+  }
+}
 
 

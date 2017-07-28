@@ -1,7 +1,6 @@
 import React from 'react'
 import {Grid} from 'react-bootstrap'
 import {connect} from 'react-redux'
-import {Doughnut} from 'react-chartjs'
 import PieChart from 'react-svg-piechart'
 import {expandedSector} from 'react-svg-piechart'
 
@@ -28,7 +27,7 @@ export default connect(
 
 
     render() {
-      const transactions = this.props.transactions === null ? [] : this.props.transactions
+        const transactions = this.props.transactions === null ? [] : this.props.transactions
       const sumValuesOfOneCategory = category =>
         transactions.filter(
           transaction => transaction.category === category
@@ -55,35 +54,26 @@ export default connect(
 
       return (
 
-        <Grid>
-
-          <Doughnut data={totals} maxWidth={500}/>
-
-          <div className="Pie" style={{maxHeight: 500, maxWidth: 500}}>
-            <PieChart
-              data={ totals }
-              expandedSector={expandedSector}
-              onSectorHover={this.handleMouseEnterOnSector}
-              sectorStrokeWidth={2}
-              expandOnHover
-              shrinkOnTouchEnd
+<Grid>
+            <PieChart className="col-xs-12 col-sm-6"
+                      data={ totals }
+                      expandedSector={expandedSector}
+                      onSectorHover={this.handleMouseEnterOnSector}
             />
-            <div>
+            <div className='col-sm-3' style={{lineHeight: 0.4}}>
               {
                 totals.map((element, i) => (
-                  <div key={i}>
-                    <span style={{background: element.color, margin: 10}}>tukolor!!!!!!!!!!</span>
-                    <span style={{fontWeight: this.state.expandedSector === i ? "bold" : null}}>
-                                {element.label} : {element.value}
-                            </span>
+                  <div key={i} style={{fontSize: 15, margin: 0, padding: 0}}>
+                    <span style={{color: element.color, margin: 0, padding: 0, marginRight: 10, fontSize:50, position: 'relative', top: 23}}>&bull;</span>
+                    <span style={{display: 'block', marginLeft: 25, fontWeight: this.state.expandedSector === i ? "bold" : null, lineHeight: 1}}>
+                      <b>{element.label + ': '}</b> {element.value}
+                    </span>
                   </div>
                 ))
               }
             </div>
-          </div>
 
-          {/*https://rma-consulting.github.io/react-easy-chart/*/}
-        </Grid>
+</Grid>
       )
     }
   }
