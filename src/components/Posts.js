@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { deleteTransaction } from '../state/posts'
 //import { favPost } from '../state/favs'
 
-import PostForm from '../../../jfdd7-gw-app/src/components/PostForm'
+import PostForm from './PostForm'
 
 const Transactions = ({ transactions, favedTransactionIds, handleDeleteTransactionClick, handleFavTransactionClick }) => (
   <div>
