@@ -122,6 +122,7 @@ export default connect(
                 <tr>
                   <th>data</th>
                   <th className="text-right">wartość</th>
+                  <th className="text-right">tytuł</th>
                   <th className="text-right">kategoria</th>
                   <th>Usuń</th>
                 </tr>
@@ -142,6 +143,9 @@ export default connect(
                         </td>
                         <td className="text-right" style={ transaction.value > 0 ? {color: 'green'} : {color: 'red'}}>
                           { (transaction.value) }
+                        </td>
+                        <td className="text-right">
+                          { transaction.title }
                         </td>
                         <td className="text-right">
                           { transaction.category }
