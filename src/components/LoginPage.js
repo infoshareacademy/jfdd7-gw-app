@@ -4,67 +4,76 @@
 import React from 'react';
 import LoginForm from './LoginForm';
 import RegisterUser from './RegisterUser'
-import {Button, Modal} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
 
 export default  class LoginPage extends React.Component {
 
-    state = {
-        showLogin: false,
-        showRegister: false
+  state = {
+    showLogin: false,
+    showRegister: false
+  }
+
+  render() {
+
+    const showLogin = {
+      'display': this.state.showLogin ? 'block' : 'none'
     }
 
-    render() {
+    const showRegister = {
+      'display': this.state.showRegister ? 'block' : 'none'
+    }
 
-        const showLogin = {
-            'display': this.state.showLogin ? 'block' : 'none'
-        }
+    const showL = () => {
+      this.setState({
+        showLogin: !this.state.showLogin,
+        showRegister: this.state.showRegister ? false : null
+      })
+    }
 
-        const showRegister = {
-            'display': this.state.showRegister ? 'block' : 'none'
-        }
+    const showR = () => {
+      this.setState({
+        showRegister: !this.state.showRegister,
+        showLogin: this.state.showLogin ? false : null
+      })
+    }
 
-        const showL = () => {
-            this.setState({ showLogin: !this.state.showLogin,
-                            showRegister: this.state.showRegister ? false : null})
-        }
+    return (
+      <div className="row">
+        <div className="loginLogo"></div>
+        <div className="col-md-4 col-md-offset-4 ">
+          <div>
+            <Button
+              block
+              bsStyle="warning"
+              className="horizontal"
+              onClick={showL}
+            >Panel logowania</Button>
 
-        const showR = () => {
-            this.setState({ showRegister: !this.state.showRegister,
-                            showLogin: this.state.showLogin ? false : null  })
-        }
+            <Button
+              block
+              bsStyle="warning"
+              className="horizontal"
+              onClick={showR}
+            >Załóż konto</Button>
+          </div>
 
-        return (
-            <div className="row">
-                <div className="loginLogo"></div>
-                <div className="col-md-4 col-md-offset-4 ">
-                <div>
-                    <Button
-                        block
-                        bsStyle="warning"
-                        className="horizontal"
-                        onClick={showL}
-                    >Panel logowania</Button>
-
-                    <Button
-                        block
-                        bsStyle="warning"
-                        className="horizontal"
-                        onClick={showR}
-                    >Załóż konto</Button>
-                </div>
-
-
-                    <div style={showLogin}>
-                        <LoginForm />
-                    </div>
-
-
-                    <div style={showRegister}>
-                        <RegisterUser/>
-                    </div>
-                </div>
+          <CSSTransitionGroup transitionName="example">
+            <div style={showLogin}>
+              {/*{*/}
+              {/*this.state.showLogin === false ? null :  */}
+              {/*}*/}
+              <LoginForm />
             </div>
-        );
-    }
+          </CSSTransitionGroup>
+
+
+          <div style={showRegister}>
+            <RegisterUser/>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
