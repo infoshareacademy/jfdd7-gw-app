@@ -58,19 +58,14 @@ export default  class LoginPage extends React.Component {
             >Załóż konto</Button>
           </div>
 
-          <CSSTransitionGroup transitionName="example">
-            <div style={showLogin}>
-              {/*{*/}
-              {/*this.state.showLogin === false ? null :  */}
-              {/*}*/}
-              <LoginForm />
-            </div>
+          <CSSTransitionGroup
+            transitionName="example"
+            // transitionEnterTimeout={3000}
+            // transitionLeaveTimeout={3000}
+          >
+            { this.state.showLogin ? <LoginForm /> : null }
+            { this.state.showRegister ? <RegisterUser/> : null }
           </CSSTransitionGroup>
-
-
-          <div style={showRegister}>
-            <RegisterUser/>
-          </div>
         </div>
       </div>
     );
