@@ -4,6 +4,14 @@ import {connect} from 'react-redux'
 import moment from 'moment'
 
 import {updateTransaction, createTransaction} from '../state/posts'
+const ulStyle = {
+  backgroundColor: 'white',
+  padding: 0,
+  borderRadius: '0 0 4px 4px',
+  border: '1px solid #ccc',
+  borderBottomStyle: 'none'
+}
+
 
 //import {add} from '../state/transactions'
 
@@ -87,7 +95,7 @@ class AddTransactionForm extends React.Component {
               />
             </FormGroup>
 
-            <FormGroup controlId="formControlsSelectMultiple">
+            <FormGroup style={{marginBottom: 0}} controlId="formControlsSelectMultiple">
               <ControlLabel>Kategoria</ControlLabel>
               <FormControl required
                            autoComplete="off"
@@ -97,10 +105,13 @@ class AddTransactionForm extends React.Component {
               onChange={event => this.setState({
                 category: event.target.value
               })}
+                           style={{borderRadius: '4px 4px 0 0'}}
               />
 
             </FormGroup>
-            {categories.map(category => <li style={{listStyleType: 'none'}}>{category}</li>)}
+            <ul style={ulStyle}>
+            {categories.map(category => <li style={{listStyleType: 'none', padding: '0 0 6px 12px'}}>{category}</li>)}
+            </ul>
             <Button type="submit" className='left col-xs-12 col-md-5' bsStyle="success">Dodaj wpis</Button>
           </form>
 

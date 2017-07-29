@@ -6,7 +6,7 @@ import {Nav, NavItem, NavDropdown, Navbar, Button} from 'react-bootstrap'
 import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap'
 import firebase from 'firebase'
 
-import image from '../pictures/logo.png'
+import image from '../pictures/logo2.png'
 
 export default class MainMenu extends React.Component {
 
