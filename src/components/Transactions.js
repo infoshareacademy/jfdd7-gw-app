@@ -37,6 +37,33 @@ export default connect(
 
 
 
+      const overviewCreator = (h1, p1, p2, p3, p4) => {
+          return (
+              <div className='overview'>
+                  <h2>{h1}</h2>
+                  <ul>
+                      <li>{p1}</li>
+                      <li>{p2}</li>
+                      <li>{p3}</li>
+                      <li>{p4}</li>
+                  </ul>
+
+              </div>)
+      }
+
+      const balance = data.map(transaction=> transaction.value).reduce((total, next)=> total + next,0)
+
+      const balanceOverview = balance => {
+
+
+         if (balance < -1500){
+             return overviewCreator('Polecamy', 'to', 'tqt', 'tamto', 'cos')
+         }
+
+
+      }
+
+
       const filters = {
        value_incomes: transaction => transaction.value > 0,
         value_outcomes: transaction => transaction.value < 0
@@ -78,7 +105,7 @@ export default connect(
 
           {
             this.state.summaryEnabled === true ?
-              <p>Bilansik</p> :
+             balanceOverview(balance) :
               <div>
                 <ul className="nav nav-tabs">
                   {
