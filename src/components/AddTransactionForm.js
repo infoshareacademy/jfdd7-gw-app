@@ -68,7 +68,7 @@ class AddTransactionForm extends React.Component {
                 placeholder="Data"
                 value={this.state.date}
                 onChange={event => this.setState({
-                  date: event.target.value
+                  date: event.target.value || moment().format('YYYY-MM-D')
                 })}
               />
             </FormGroup>

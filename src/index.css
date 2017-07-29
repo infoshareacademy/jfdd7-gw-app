@@ -29,6 +29,22 @@ body {
   border-radius: 50%;
   margin: 30px auto 10px; }
 
+.loginDiv {
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.example-enter {
+  opacity: 0; }
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity .6s ease; }
+
+.example-leave.example-leave-active {
+  opacity: 0;
+  transition: opacity .6s ease; }
+
 .container-fluid h2 {
   font-family: 'Kaushan Script', cursive; }
 
