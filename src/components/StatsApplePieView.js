@@ -7,7 +7,7 @@ import {expandedSector} from 'react-svg-piechart'
 
 export default connect(
   state => ({
-    transactions: state.transactions.data
+    transactions: state.posts.data
   })
 )(
   class StatsApplePieView extends React.Component {
