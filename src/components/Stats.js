@@ -38,7 +38,7 @@ export default connect(
       return (
         <Grid>
           <div className='graf'>
-            <h2 style={{textAlign: 'center'}}>Bilans wydatków i wpływów</h2>
+            <h2 style={{textAlign: 'center'}}>Zestawienie wydatków i wpływów</h2>
 
             <ResponsiveContainer height={300}>
               <BarChart data={totals}>
