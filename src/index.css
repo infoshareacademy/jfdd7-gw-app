@@ -36,6 +36,15 @@ body {
 
 .overview{
   background-color: #9a4e3e;
+  border-radius: 20px;
+  color: #f0c46d;
+border: solid 3px  #ecdbff;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.overview h2{
+  text-align: center;
 }
 
 .example-enter {

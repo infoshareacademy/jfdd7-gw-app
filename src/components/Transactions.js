@@ -57,7 +57,11 @@ export default connect(
 
 
          if (balance < -1500){
-             return overviewCreator('Polecamy', 'to', 'tqt', 'tamto', 'cos')
+             return overviewCreator('Jest źle! Plan naprawczy:',
+                 'Analiza historii wydatków, określ priorytety, ustal realny domowy budżet',
+                 'Unikaj wydatków z kategorii o niskim znaczeniu',
+                 'Jeżeli masz długi ',
+                 'cos')
          }
 
 
