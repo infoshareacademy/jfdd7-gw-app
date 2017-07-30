@@ -35,12 +35,33 @@ body {
   right: 0; }
 
 .overview{
-  background-color: #9a4e3e;
-  border-radius: 20px;
-  color: #f0c46d;
-border: solid 3px  #ecdbff;
   margin-top: 10px;
   text-align: left;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+#warning{
+  background-color: #e3443c;
+  border-radius: 20px;
+  color: #f0c46d;
+border: solid 3px #7e1806;
+
+}
+
+#notbad{
+  background-color: #caca00;
+  border-radius: 20px;
+  color: #f0c46d;
+  border: solid 3px #939a0b;
+}
+
+#good{
+  background-color: #5c9a1d;
+  border-radius: 20px;
+  color: #f0c46d;
+  border: solid 3px #0a860e;
+
 }
 
 .overview h2{
