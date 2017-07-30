@@ -118,7 +118,7 @@ export default connect(
 
             return (
                 <Grid>
-                    <Button
+                    { this.props.disp ? null : <Button
                         className='delete '
 
 
@@ -133,7 +133,7 @@ export default connect(
                     >
                         Doradca finansowy
 
-                    </Button>
+                    </Button>}
 
                     {
                         this.state.summaryEnabled === true ?
