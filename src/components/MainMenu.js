@@ -44,10 +44,10 @@ export default class MainMenu extends React.Component {
               </LinkContainer>
             </Nav>
             <Nav pullRight>
-              <Button navbar
+              <NavItem
                       onClick={() => firebase.auth().signOut()}>
                 Wyloguj
-              </Button>
+              </NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

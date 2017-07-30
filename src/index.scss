@@ -37,8 +37,37 @@ body {
 }
 
 .overview{
-  background-color: #9a4e3e;
+  margin-top: 10px;
+  text-align: left;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
 }
+
+#warning{
+  background-color: rgba(227, 68, 60, 0.4);
+  color: #7e1806;
+  border: solid 3px #7e1806;
+
+}
+
+#notbad{
+  background-color: rgba(253, 255, 31, 0.5);
+  color: #62690a;
+  border: solid 3px #62690a;
+}
+
+#good{
+  background-color: rgba(92, 154, 29, 0.5);
+  color: #074b0a;
+  border: solid 3px #074b0a;
+
+}
+
+.overview h2{
+  text-align: center;
+}
+
 
 .loginDiv{
   position: absolute;

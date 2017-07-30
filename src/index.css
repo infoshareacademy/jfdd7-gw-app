@@ -39,28 +39,26 @@ body {
   text-align: left;
   padding-bottom: 20px;
   padding-left: 20px;
+  border-radius: 5px;
 }
 
 #warning{
-  background-color: #e3443c;
-  border-radius: 20px;
-  color: #f0c46d;
+  background-color: rgba(227, 68, 60, 0.4);
+  color: #7e1806;
 border: solid 3px #7e1806;
 
 }
 
 #notbad{
-  background-color: #caca00;
-  border-radius: 20px;
-  color: #f0c46d;
-  border: solid 3px #939a0b;
+  background-color: rgba(253, 255, 31, 0.5);
+  color: #62690a;
+  border: solid 3px #62690a;
 }
 
 #good{
-  background-color: #5c9a1d;
-  border-radius: 20px;
-  color: #f0c46d;
-  border: solid 3px #0a860e;
+  background-color: rgba(92, 154, 29, 0.5);
+  color: #074b0a;
+  border: solid 3px #074b0a;
 
 }
 

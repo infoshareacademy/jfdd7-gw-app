@@ -64,8 +64,8 @@ export default connect(
                 if (balance < -500 && balance >= -1500) {
                     return overviewCreator('Uważaj bilans jest ujemny! Plan naprawczy:',
                         'Sprawdż w historii wpisów kiedy możesz spodziewać się dochodu',
-                        'Do tego czasu staraj się wydawać jaknajmniej',
-                        'Kożystaj z Pomocnika Zakupowego firmy Niewiem',
+                        'Do tego czasu staraj się wydawać jak najmniej',
+                        'Korzystaj z Pomocnika Zakupowego firmy Niewiem',
                         'Zmniejsz zużycie wody, prądu, gazu', 'warning')
                 }
 
@@ -73,24 +73,24 @@ export default connect(
                     return overviewCreator('Potencjalne kłopoty! Plan naprawczy:',
                         'Pamiętaj żeby uaktualniać wpisy transakcji',
                         'Przesiądź się z samochodu na rower',
-                        'Kożystaj z Pomocnika Zakupowego firmy Niewiem',
+                        'Korzystaj z pomocnika zakupowego firmy Niewiem',
                         'Zainteresuj się dietą wegetariańska', 'notbad')
                 }
 
                 if (balance >= 500 && balance < 1500) {
                     return overviewCreator('Sytuacja stabilna. Plan dla Ciebie:',
                         'Wybierz kurs w infoShare Academy na ktory bedziesz odkładał',
-                        'Zadbaj o zdrowie- Sprawdz aplikacje Miotaczy Kodu',
-                        'Zainteresuj sie lokatami i kontami oszczednosciowymi',
-                        '', 'good')
+                        'Zadbaj o zdrowie- sprawdź aplikację Miotaczy Kodu',
+                        'Zainteresuj się lokatami i kontami oszczędnościowymi',
+                        'Fundusze inwestycyjne', 'good')
                 }
 
                 if (balance >= 1500) {
                     return overviewCreator('Jest dobrze. Plan dla Ciebie:',
-                        'Zrelaksuj sie. Idż na koncert- skożystaj z aplikacji K-O Mkapz',
+                        'Zrelaksuj się. Idż na koncert- skorzystaj z aplikacji K-O Mkapz',
                         'Inwestuj w dzieła sztuki',
                         'Zacznij zarabiac na głodnych programistach',
-                        'Tanie wino jest dobre, bo jest dobre i tanie', 'good')
+                        'Zatrudnij Junior Fontend Developera', 'good')
                 }
 
             }
