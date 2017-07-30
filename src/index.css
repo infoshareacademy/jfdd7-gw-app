@@ -34,6 +34,20 @@ body {
   left: 0;
   right: 0; }
 
+.delete{
+  background-color: rgba(220, 241, 246, 0.4);
+  background-image: none;
+  font-weight: 700;
+  text-shadow: none;
+  border: solid 1px #ffffd1;
+
+
+}
+
+.delete:hover{
+  background-color: rgba(220, 241, 246, 0.6);
+}
+
 .overview{
   margin-top: 10px;
   text-align: left;

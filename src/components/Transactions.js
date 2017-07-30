@@ -119,7 +119,7 @@ export default connect(
             return (
                 <Grid>
                     <Button
-                        className={this.props.resetFilters}
+                        className='delete '
 
 
                         onClick={event => {
@@ -131,14 +131,14 @@ export default connect(
                         }}
 
                     >
-                        Nuke button
+                        Doradca finansowy
 
                     </Button>
 
                     {
                         this.state.summaryEnabled === true ?
                             balanceOverview(balance) :
-                            <div>
+                            <div className="col-sm-12">
                                 <ul className="nav nav-tabs">
                                     {
                                         buttons.map(
@@ -212,10 +212,12 @@ export default connect(
                                                         { transaction.category }
                                                     </td>
                                                     <td>
-                                                        <button data-uid={transaction.uid}
+                                                        <Button
+                                                            className="delete"
+                                                            data-uid={transaction.uid}
                                                                 onClick={this.props.handleDeleteTransactionClick}>
                                                             Usuń
-                                                        </button>
+                                                        </Button>
                                                     </td>
                                                 </tr>
                                             )
