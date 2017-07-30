@@ -1,3 +1,4 @@
+
 // action types
 const FETCH__BEGIN = 'transactions/FETCH__BEGIN'
 const FETCH__SUCCESS = 'transactions/FETCH__SUCCESS'
@@ -71,6 +72,7 @@ export default (state = initialState, action = {}) => {
         ...state,
         data: [action.transaction].concat(state.data)
       }
+
     default:
       return state
   }

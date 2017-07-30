@@ -11,22 +11,6 @@ export default class FirstPage extends React.Component {
           <Grid>
             <Row className="show-grid">
               <Col xs={6} md={4} lg={3}>
-                <LinkContainer to="/categories" className="custom">
-                  <Button bsStyle="warning" bsSize="large" >
-                    Kategorie
-                    <Glyphicon glyph="glyphicon glyphicon-list gi-5x" style={{display: 'block'}} />
-                  </Button>
-                </LinkContainer>
-              </Col>
-              <Col xs={6} md={4} lg={3}>
-                <LinkContainer to="/transactions" className="custom">
-                  <Button bsStyle="danger" bsSize="large" >
-                    Historia
-                    <Glyphicon class="icons" glyph="glyphicon glyphicon-folder-open gi-5x" style={{display: 'block'}} />
-                  </Button>
-                </LinkContainer>
-              </Col>
-              <Col xs={6} md={4} lg={3}>
                 <LinkContainer to="/add-transaction" className="custom">
                   <Button bsStyle="info" bsSize="large">
                     Dodaj wpis
@@ -34,6 +18,24 @@ export default class FirstPage extends React.Component {
                   </Button>
                 </LinkContainer>
               </Col>
+                <Col xs={6} md={4} lg={3}>
+                    <LinkContainer to="/transactions" className="custom">
+                        <Button bsStyle="danger" bsSize="large" >
+                            Historia
+                            <Glyphicon class="icons" glyph="glyphicon glyphicon-folder-open gi-5x" style={{display: 'block'}} />
+                        </Button>
+                    </LinkContainer>
+                </Col>
+              <Col xs={6} md={4} lg={3}>
+                <LinkContainer to="/categories" className="custom">
+                  <Button bsStyle="warning" bsSize="large" >
+                    Kategorie
+                    <Glyphicon glyph="glyphicon glyphicon-list gi-5x" style={{display: 'block'}} />
+                  </Button>
+                </LinkContainer>
+              </Col>
+
+
               <Col xs={6} md={4} lg={3}>
                 <LinkContainer to="/stats" className="custom">
                   <Button bsStyle="primary" bsSize="large" >
