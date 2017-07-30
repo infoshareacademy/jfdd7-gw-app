@@ -7,7 +7,7 @@ export default class AddTransaction extends React.Component {
     return (
       <div>
         <AddTransactionForm/>
-        <Transactions limit={10}/>
+        <Transactions limit={10} disp={true}/>
       </div>
     )
   }

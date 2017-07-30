@@ -6,6 +6,7 @@ import firebase from 'firebase'
 import {syncUser} from '../state/auth'
 import {connect} from 'react-redux'
 
+
 import {FormGroup, Col, FormControl, Button} from 'react-bootstrap'
 
 
@@ -44,6 +45,7 @@ class LoginForm extends React.Component {
 
   render() {
     return (
+
       <div className="loginDiv">
         <form onSubmit={this.handleSubmit}>
 
