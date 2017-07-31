@@ -96,7 +96,7 @@ class AddTransactionForm extends React.Component {
               position: 'top',
               selector: "#titleInput",
               title: <h4 style={{color: "blue", padding: '7px'}}>KATEGORIA</h4>,
-              body: <div style={{color: "green", padding: '7px'}}>Dodaj kategorię by pogrupować swoje wydatki, np. jeśli dwie różne transakcje zatytułowałeś "paliwo" i "ubezpieczenie samochodu", użyj wspólnej kategorii "samochód" lub "transport"</div>
+              body: <div style={{color: "green"}}>Dodaj kategorię by pogrupować swoje wydatki, np. jeśli dwie różne transakcje zatytułowałeś "paliwo" i "ubezpieczenie samochodu", użyj wspólnej kategorii "samochód" lub "transport"</div>
             },
             {
               step: 5,
