@@ -74,7 +74,7 @@ class AddTransactionForm extends React.Component {
           steps={[
             {
               step: 1,
-              title: <h4 style={{color: "red", padding: '7px' }}>PRZECZYTAJ DOKŁADNIE TE WSKAZÓWKI, ZAJMIE TO TYLKO CHWILĘ.</h4>,
+              title: <h4 style={{color: "red", padding: '8px' }}>PRZECZYTAJ DOKŁADNIE TE WSKAZÓWKI, ZAJMIE TO TYLKO CHWILĘ.</h4>,
             },
             {
               step: 2,
