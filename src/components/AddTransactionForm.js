@@ -75,33 +75,40 @@ class AddTransactionForm extends React.Component {
             },
             {
               step: 2,
-              position: 'bottom', marginLeft: -200,
+              position: 'bottom',
               selector: "#dateInput",
-              title: <h4 style={{color: "blue"}}>DATE PICKER</h4>,
-              body: <div style={{color: "green"}}>Provide date in US format: mm/dd/yyyy</div>
+              title: <h4 style={{color: "blue"}}>KWOTA</h4>,
+              body: <div style={{color: "green"}}>Podaj kwotę transakcji. Użyj "-" (ustwienie domyślne) dla wydatków. Wyczyść polę dla wpływów ("-" jest zbędny).</div>
 
             },
             {
               step: 3,
               position: 'bottom',
               selector: "#amountInput",
-              title: <h4 style={{color: "blue"}}>AMOUNT INPUT</h4>,
-              body: <div style={{color: "green"}}>Provide an amount of transaction. Use a "-" (it's set defaultly) for spendings. Clear the input if adding an income (prefix "-" is not necessary)</div>
+              title: <h4 style={{color: "blue"}}>TYTUŁ</h4>,
+              body: <div style={{color: "green"}}>Dodaj krótki opis, np. "miesięczne rachunki" lub "paliwo". </div>
             },
             {
               step: 4,
               position: 'top',
               selector: "#titleInput",
-              title: <h4 style={{color: "blue"}}>TITLE INPUT</h4>,
-              body: <div style={{color: "green"}}>Add a title or a short description, e.g.  "monthly bill" or "petrol" </div>
+              title: <h4 style={{color: "blue"}}>KATEGORIA</h4>,
+              body: <div style={{color: "green"}}>Dodaj kategorię by pogrupować swoje wydatki, np. jeśli dwie różne transakcje zatytułowałeś "paliwo" i "ubezpieczenie samochodu", użyj wspólnej kategorii "samochód" lub "transport"</div>
             },
             {
               step: 5,
               position: 'top',
               selector: "#categoryInput",
-              title: <h4 style={{color: "blue"}}>CATEGORY INPUT</h4>,
-              body: <div style={{color: "green"}}>Add a category to group all of your spendings. E.g. if you've added two transaction with titles "petrol" and "car insurence" put it together in one category "car" or "transport"</div>
-            }
+              title: <h4 style={{color: "blue"}}>FILTRY</h4>,
+              body: <div style={{color: "green"}}>Filtruj ostatnie transakcje</div>
+            },
+            // {
+            //   step: 6,
+            //   position: 'top',
+            //   selector: "#categoryInput",
+            //   title: <h4 style={{color: "blue"}}></h4>,
+            //   body: <div style={{color: "green"}}></div>
+            // }
           ]}
         />
 
