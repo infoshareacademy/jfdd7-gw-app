@@ -94,7 +94,7 @@ class RegisterUser extends React.Component {
                         <Col sm={12}>
                             <FormControl
                                 type="text"
-                                placeholder="Password"
+                                placeholder="Ustaw hasło"
                                 value={this.state.password}
                                 onChange={this.handlePasswordChange}
                             />
