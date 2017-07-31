@@ -14,6 +14,8 @@ const ulStyle = {
 }
 
 
+
+
 //import {add} from '../state/transactions'
 
 
@@ -68,47 +70,41 @@ class AddTransactionForm extends React.Component {
           onNext={(step) => this.setState({tourStep: step})}
           onBack={(step) => this.setState({tourStep: step})}
           onCancel={() => this.setState({isTourActive: false})}
+
           steps={[
             {
               step: 1,
-              title: <h4 style={{color: "red"}}>PLEASE, READ CAREFULLY THIS TOUR GUIDE. IT WILL TAKE YOU JUST A MINUTE</h4>,
+              title: <h4 style={{color: "red", padding: '7px' }}>PRZECZYTAJ DOKŁADNIE TE WSKAZÓWKI, ZAJMIE TO TYLKO CHWILĘ.</h4>,
             },
             {
               step: 2,
               position: 'bottom',
               selector: "#dateInput",
-              title: <h4 style={{color: "blue"}}>KWOTA</h4>,
-              body: <div style={{color: "green"}}>Podaj kwotę transakcji. Użyj "-" (ustwienie domyślne) dla wydatków. Wyczyść polę dla wpływów ("-" jest zbędny).</div>
+              title: <h4 style={{color: "blue", padding: '7px'}}>KWOTA</h4>,
+              body: <div style={{color: "green", padding: '7px'}}>Podaj kwotę transakcji. Użyj "-" (ustwienie domyślne) dla wydatków. Wyczyść polę dla wpływów ("-" jest zbędny).</div>
 
             },
             {
               step: 3,
               position: 'bottom',
               selector: "#amountInput",
-              title: <h4 style={{color: "blue"}}>TYTUŁ</h4>,
-              body: <div style={{color: "green"}}>Dodaj krótki opis, np. "miesięczne rachunki" lub "paliwo". </div>
+              title: <h4 style={{color: "blue", padding: '7px'}}>TYTUŁ</h4>,
+              body: <div style={{color: "green",padding: '7px'}}>Dodaj krótki opis, np. "miesięczne rachunki" lub "paliwo". </div>
             },
             {
               step: 4,
               position: 'top',
               selector: "#titleInput",
-              title: <h4 style={{color: "blue"}}>KATEGORIA</h4>,
-              body: <div style={{color: "green"}}>Dodaj kategorię by pogrupować swoje wydatki, np. jeśli dwie różne transakcje zatytułowałeś "paliwo" i "ubezpieczenie samochodu", użyj wspólnej kategorii "samochód" lub "transport"</div>
+              title: <h4 style={{color: "blue", padding: '7px'}}>KATEGORIA</h4>,
+              body: <div style={{color: "green", padding: '7px'}}>Dodaj kategorię by pogrupować swoje wydatki, np. jeśli dwie różne transakcje zatytułowałeś "paliwo" i "ubezpieczenie samochodu", użyj wspólnej kategorii "samochód" lub "transport"</div>
             },
             {
               step: 5,
               position: 'top',
               selector: "#categoryInput",
-              title: <h4 style={{color: "blue"}}>FILTRY</h4>,
-              body: <div style={{color: "green"}}>Filtruj ostatnie transakcje</div>
+              title: <h4 style={{color: "blue", padding: '7px'}}>FILTRY</h4>,
+              body: <div style={{color: "green", padding: '7px'}}>Filtruj ostatnie transakcje</div>
             },
-            // {
-            //   step: 6,
-            //   position: 'top',
-            //   selector: "#categoryInput",
-            //   title: <h4 style={{color: "blue"}}></h4>,
-            //   body: <div style={{color: "green"}}></div>
-            // }
           ]}
         />
 

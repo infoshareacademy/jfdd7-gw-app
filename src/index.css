@@ -7,11 +7,10 @@ body {
   background-size: 37%; }
 
 .custom {
-
   width: 100%;
   height: 160px;
   margin-bottom: 5px;
-  background-color: #eec16d;
+  background-color: #f1c46d;
   border-radius: 12px; }
 
 .login {
@@ -30,56 +29,45 @@ body {
   border-radius: 50%;
   margin: 30px auto 10px; }
 
-.loginDiv {
-  position: absolute;
-  left: 0;
-  right: 0; }
-
-.delete{
+.delete {
   background-color: rgba(220, 241, 246, 0.4);
   background-image: none;
   font-weight: 700;
   text-shadow: none;
-  border: solid 1px #ffffd1;
+  border: solid 1px #ffffd1; }
 
+.delete:hover {
+  background-color: rgba(220, 241, 246, 0.6); }
 
-}
-
-.delete:hover{
-  background-color: rgba(220, 241, 246, 0.6);
-}
-
-.overview{
+.overview {
   margin-top: 10px;
   text-align: left;
   padding-bottom: 20px;
   padding-left: 20px;
-  border-radius: 5px;
-}
+  border-radius: 10px; }
 
-#warning{
+#warning {
   background-color: rgba(227, 68, 60, 0.4);
   color: #7e1806;
-border: solid 3px #7e1806;
+  border: solid 3px #7e1806; }
 
-}
-
-#notbad{
+#notbad {
   background-color: rgba(253, 255, 31, 0.5);
   color: #62690a;
-  border: solid 3px #62690a;
-}
+  border: solid 3px #62690a; }
 
-#good{
+#good {
   background-color: rgba(92, 154, 29, 0.5);
   color: #074b0a;
-  border: solid 3px #074b0a;
+  border: solid 3px #074b0a; }
 
-}
+.overview h2 {
+  text-align: center; }
 
-.overview h2{
-  text-align: center;
-}
+.loginDiv {
+  position: absolute;
+  left: 0;
+  right: 0; }
 
 .example-enter {
   opacity: 0; }
