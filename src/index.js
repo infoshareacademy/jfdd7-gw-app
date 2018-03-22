@@ -12,7 +12,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Auth>
       <App/>
-    </Auth>
+    </Auth> 
+   
   </Provider>,
   document.getElementById('root')
 )

@@ -8,6 +8,7 @@ import LoginPage from "./LoginPage";
 // import SignUpForm from './components/SignUpForm'
 
 const Auth = ({ user, children }) => (
+ 
   user !== null ?
     children :
     <div>

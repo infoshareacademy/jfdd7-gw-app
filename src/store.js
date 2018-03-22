@@ -27,12 +27,19 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
 ))
 
 firebase.initializeApp({
-  apiKey: "AIzaSyBS-qsv9cYzvk7AhFsSS4mEd0uQwBOWx18",
-  authDomain: "jfdd7-app-tomaszm.firebaseapp.com",
-  databaseURL: "https://jfdd7-app-tomaszm.firebaseio.com",
-  projectId: "jfdd7-app-tomaszm",
-  storageBucket: "jfdd7-app-tomaszm.appspot.com",
-  messagingSenderId: "119533206844"
+  // apiKey: "AIzaSyBS-qsv9cYzvk7AhFsSS4mEd0uQwBOWx18",
+  // authDomain: "jfdd7-app-tomaszm.firebaseapp.com",
+  // databaseURL: "https://jfdd7-app-tomaszm.firebaseio.com",
+  // projectId: "jfdd7-app-tomaszm",
+  // storageBucket: "jfdd7-app-tomaszm.appspot.com",
+  // messagingSenderId: "119533206844"
+  apiKey: "AIzaSyDiFBw1B6HeqX1-t1HX0Zq6jBKi2Y-qS14",
+    authDomain: "jfdd7-gw-app.firebaseapp.com",
+    databaseURL: "https://jfdd7-gw-app.firebaseio.com",
+    projectId: "jfdd7-gw-app",
+    storageBucket: "jfdd7-gw-app.appspot.com",
+    messagingSenderId: "254047576513"
+
 })
 
 

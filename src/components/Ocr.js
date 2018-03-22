@@ -29,7 +29,9 @@ export default class Ocr extends React.Component {
         console.log('ocrParsedResult: \n', parsedResult.ocrParsedResult);
       }).catch(function (err) {
       console.log('ERROR:', err);
-    });
-    )
-  }
+    })
+  
+  
+
 }
+    
