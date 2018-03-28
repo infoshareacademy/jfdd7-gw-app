@@ -2,6 +2,7 @@
   "name": "jfdd7-gw-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tomaszmoroz.github.io/homeBudgetApp/",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "chart.js": "^1.1.1",
@@ -25,12 +26,15 @@
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0",
     "update": "^0.7.4"
+    
   },
   "scripts": {
     "preinstall": "npm config set package-lock false",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
   }
 }
